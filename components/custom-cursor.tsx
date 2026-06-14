@@ -37,33 +37,16 @@ export function CustomCursor() {
         }
       `}</style>
 
-      {/* Custom cursor dot */}
+      {/* Subtle custom cursor dot */}
       <div
-        className={`fixed w-2 h-2 bg-[color:var(--accent-primary)] rounded-full pointer-events-none z-50 transition-opacity duration-200 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
+        className={`fixed w-1 h-1 bg-[color:var(--accent-primary)] rounded-full pointer-events-none z-50 transition-opacity duration-300 ${
+          isVisible ? 'opacity-50' : 'opacity-0'
         }`}
         style={{
           left: `${mousePos.x}px`,
           top: `${mousePos.y}px`,
           transform: 'translate(-50%, -50%)',
-          boxShadow: '0 0 8px rgba(6, 182, 212, 0.4)',
-        }}
-      />
-
-      {/* Custom cursor ring */}
-      <div
-        className={`fixed pointer-events-none z-50 transition-opacity duration-200 ${
-          isVisible ? 'opacity-60' : 'opacity-0'
-        }`}
-        style={{
-          left: `${mousePos.x}px`,
-          top: `${mousePos.y}px`,
-          transform: 'translate(-50%, -50%)',
-          width: '24px',
-          height: '24px',
-          border: '1px solid var(--accent-primary)',
-          borderRadius: '50%',
-          boxShadow: '0 0 12px rgba(6, 182, 212, 0.2)',
+          boxShadow: '0 0 4px rgba(6, 182, 212, 0.2)',
         }}
       />
     </>
