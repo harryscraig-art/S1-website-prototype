@@ -4,13 +4,10 @@ import { HelpPanel } from './help-panel'
 
 export function Hero() {
   return (
-    <section className="section relative min-h-screen flex items-center justify-center overflow-hidden bg-[color:var(--background)]">
-      {/* Animated Background with Teal Depth - increased visibility */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[color:var(--accent-light)] via-[color:var(--background)] to-[color:var(--background)]" />
-      
-      {/* Decorative teal accent elements - increased and visible */}
-      <div className="absolute top-20 right-20 w-56 h-56 bg-[color:var(--accent-primary)]/15 rounded-full blur-3xl -z-10" />
-      <div className="absolute -bottom-20 -left-10 w-72 h-72 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl -z-10" />
+    <section className="section relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(to bottom, var(--accent-light), var(--background), var(--background))' }}>
+      {/* Decorative teal accent elements - visible blur circles */}
+      <div className="absolute top-1/4 right-1/4 w-56 h-56 bg-[color:var(--accent-primary)]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-custom">
         <div className="max-w-2xl mx-auto text-center animate-slide-up">
