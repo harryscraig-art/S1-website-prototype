@@ -144,7 +144,7 @@ components/
 --text-foreground: #1a1a1a
 --text-muted: #6b7280
 --border-color: #e5e7eb
---accent-primary: [TBD - single accent colour]
+--accent-primary: #0891b2
 --shadow-sm: 0 1px 2px rgba(0,0,0,0.05)
 --shadow-md: 0 4px 6px rgba(0,0,0,0.1)
 --glass-bg: rgba(255,255,255,0.7)
@@ -159,7 +159,7 @@ components/
 --text-foreground: #ffffff
 --text-muted: #a0a0a0
 --border-color: #333333
---accent-primary: [same as light]
+--accent-primary: #0891b2
 --shadow-sm: 0 1px 2px rgba(0,0,0,0.3)
 --shadow-md: 0 4px 6px rgba(0,0,0,0.5)
 --glass-bg: rgba(15,15,15,0.6)
@@ -386,7 +386,7 @@ og:url: [production domain]
 
 ---
 
-## 12. HOW WE HAVE HELPED (Outcomes Section)
+## 12. HOW WE HAVE HELPED
 
 ### Four Anonymised Real-Life Examples
 Present as examples of the types of paperwork support provided. Do not describe as fictional, call them testimonials, imply guaranteed outcomes, or include identifying information.
@@ -482,7 +482,7 @@ Receiving multiple letters, notices and council correspondence relating to counc
 4. Build Services section (3 service cards)
 
 ### Phase 3: Supporting Sections
-1. Build Outcomes section (4 anonymised real-life example cards)
+1. Build HowWeHaveHelped section (4 anonymised real-life example cards)
 2. Build FAQ section (accordion or card-based, 5–7 questions)
 3. Build CTASection (reinforcement + trigger button)
 4. Build Footer (branding, links, disclaimer)
