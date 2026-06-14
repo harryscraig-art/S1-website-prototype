@@ -100,7 +100,7 @@ components/
 ├── Hero.tsx (headline + accent card + visual)
 ├── HowItWorks.tsx (3-step timeline or cards)
 ├── Services.tsx (3-column service overview)
-├── Outcomes.tsx (before/after examples)
+├── HowWeHaveHelped.tsx (anonymised real-life examples)
 ├── FAQ.tsx (accordion or card-based)
 ├── CTASection.tsx (reinforcement + button trigger)
 ├── Footer.tsx (branding + links + disclaimer)
@@ -123,7 +123,7 @@ components/
 | Hero | 120–180 | Headline, value prop, accent visual |
 | HowItWorks | 100–150 | Process steps, reassurance |
 | Services | 100–140 | Service cards, icons |
-| Outcomes | 160–200 | Four anonymised real-life examples of support provided |
+| HowWeHaveHelped | 160–200 | Four anonymised real-life examples of support provided |
 | FAQ | 150–200 | Accordion or card-based Q&A |
 | CTASection | 80–120 | Reinforcement + button |
 | Footer | 100–150 | Branding, links, disclaimer |
@@ -447,7 +447,7 @@ Receiving multiple letters, notices and council correspondence relating to counc
 
 | Risk | Mitigation |
 |------|-----------|
-| **Placeholder content feels incomplete** | Use realistic but clearly fictional examples; add disclaimer notes |
+| **Placeholder content feels incomplete** | Use anonymised real-life examples without identifying information; add appropriate framing |
 | **Dark mode implementation complexity** | Use next-themes + CSS variables; design both modes simultaneously |
 | **Modal accessibility issues** | Use Radix UI Dialog as foundation; test keyboard/screen reader |
 | **Animation performance on mobile** | Limit animations to simple CSS transitions; test on real devices |
@@ -482,7 +482,7 @@ Receiving multiple letters, notices and council correspondence relating to counc
 4. Build Services section (3 service cards)
 
 ### Phase 3: Supporting Sections
-1. Build Outcomes section (3 before/after example cards)
+1. Build Outcomes section (4 anonymised real-life example cards)
 2. Build FAQ section (accordion or card-based, 5–7 questions)
 3. Build CTASection (reinforcement + trigger button)
 4. Build Footer (branding, links, disclaimer)
@@ -529,8 +529,6 @@ Include all of the following:
 **Aesthetic:** Calm, minimal, trustworthy, professional.
 
 ---
-
-## 17. BUILD CHECKLIST (FINAL CONFIRMATION)
 
 ## 17. BUILD CHECKLIST (FINAL CONFIRMATION)
 
@@ -626,7 +624,7 @@ Include all of the following:
 3. Upon "BUILD" command: Implementation will proceed in order:
    - Phase 1: Foundation (Next.js, Tailwind, design tokens, layout)
    - Phase 2: Core Components (Navbar, Hero, HowItWorks, Services)
-   - Phase 3: Supporting Sections (Outcomes, FAQ, CTASection, Footer)
+   - Phase 3: Supporting Sections (HowWeHaveHelped, FAQ, CTASection, Footer)
    - Phase 4: Interactivity (Modal form, submission, scroll-to-top)
    - Phase 5: Polish (Animations, accessibility, dark mode refinement)
    - Phase 6: Final Review (SEO, performance, browser testing)
