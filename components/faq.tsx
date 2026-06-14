@@ -42,37 +42,41 @@ export function FAQ() {
   return (
     <section id="faq" className="section bg-[color:var(--card)]">
       <div className="container-custom max-w-2xl">
-        <div className="text-center mb-16">
-          <h2>Frequently Asked Questions</h2>
-          <p className="text-xl text-[color:var(--muted-foreground)] mt-4">
+        <div className="text-center mb-16 animate-slide-up">
+          <h2 className="text-[color:var(--foreground)]">Frequently Asked Questions</h2>
+          <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
             Common questions about our support
           </p>
+          <div className="flex justify-center gap-2 mt-6">
+            <div className="w-2 h-2 bg-[color:var(--accent-primary)] rounded-full" />
+            <div className="w-2 h-2 bg-[color:var(--accent-primary)]/40 rounded-full" />
+          </div>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4">
+        <div className="space-y-4 animate-stagger">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-[color:var(--border)] rounded-lg overflow-hidden transition-all"
+              className="group border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] rounded-lg overflow-hidden transition-all duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 hover:bg-[color:var(--muted)] transition-colors"
+                className="w-full flex items-center justify-between p-6 hover:bg-[color:var(--accent-light)] dark:hover:bg-[color:var(--accent-primary)]/10 transition-colors"
               >
                 <span className="font-semibold text-left text-[color:var(--foreground)]">
                   {faq.question}
                 </span>
                 <ChevronDown
                   size={20}
-                  className={`flex-shrink-0 text-[color:var(--accent-primary)] transition-transform ${
+                  className={`flex-shrink-0 text-[color:var(--accent-primary)] transition-transform duration-300 group-hover:scale-110 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
 
               {openIndex === index && (
-                <div className="px-6 pb-6 border-t border-[color:var(--border)] bg-[color:var(--background)]">
+                <div className="px-6 pb-6 border-t-2 border-[color:var(--accent-primary)] bg-[color:var(--accent-light)]/30 dark:bg-[color:var(--accent-primary)]/10 animate-slide-up">
                   <p className="text-[color:var(--muted-foreground)] leading-relaxed">
                     {faq.answer}
                   </p>

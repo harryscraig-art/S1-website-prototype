@@ -2,11 +2,25 @@
 
 export function CTASection() {
   return (
-    <section className="section bg-gradient-to-b from-[color:var(--background)] to-[color:var(--card)]">
-      <div className="container-custom max-w-2xl text-center">
-        <h2 className="mb-6">Ready to get organised?</h2>
+    <section className="section relative overflow-hidden bg-gradient-to-br from-[color:var(--accent-light)] via-[color:var(--background)] to-[color:var(--card)]">
+      {/* Decorative teal elements */}
+      <div className="absolute top-10 left-10 w-64 h-64 bg-[color:var(--accent-primary)]/10 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 right-20 w-80 h-80 bg-[color:var(--accent-primary)]/5 rounded-full blur-3xl -z-10" />
 
-        <p className="text-lg md:text-xl text-[color:var(--muted-foreground)] mb-8 leading-relaxed">
+      <div className="container-custom max-w-3xl text-center animate-slide-up">
+        <h2 className="mb-6 text-[color:var(--foreground)]">Ready to get organised?</h2>
+
+        {/* Decorative line accent */}
+        <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
+          <div className="w-8 h-1 bg-[color:var(--accent-primary)]/40 rounded-full" />
+        </div>
+
+        <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-3">
+          Document support that actually helps.
+        </p>
+
+        <p className="text-base md:text-lg text-[color:var(--muted-foreground)] mb-10 leading-relaxed">
           Tell us about your paperwork challenge, and we&apos;ll help you create a clear action plan.
         </p>
 
@@ -17,12 +31,13 @@ export function CTASection() {
               ;(modal as HTMLDialogElement).showModal()
             }
           }}
-          className="btn-primary px-8 py-4 text-lg inline-flex items-center justify-center gap-2 hover:shadow-elevated transition-all"
+          className="inline-flex items-center justify-center px-8 py-4 bg-[color:var(--accent-primary)] text-white hover:bg-[color:var(--accent-primary)]/90 active:bg-[color:var(--accent-primary)]/80 rounded-lg font-medium transition-all duration-300 text-lg gap-2 hover:shadow-lg hover:scale-105 animate-scale-in"
+          style={{ animationDelay: '0.2s' }}
         >
           Get Help With My Paperwork
         </button>
 
-        <p className="text-sm text-[color:var(--muted-foreground)] mt-8">
+        <p className="text-sm text-[color:var(--muted-foreground)] mt-10 bg-[color:var(--accent-light)]/30 dark:bg-[color:var(--accent-primary)]/10 p-4 rounded-lg border-l-4 border-[color:var(--accent-primary)]">
           Quick enquiry form. No obligation. We&apos;ll be in touch within 24 hours.
         </p>
       </div>

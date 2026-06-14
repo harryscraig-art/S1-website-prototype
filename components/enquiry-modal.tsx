@@ -186,7 +186,7 @@ export function EnquiryModal() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="btn-primary w-full mt-6"
+                className="inline-flex items-center justify-center px-4 py-3 w-full bg-[color:var(--accent-primary)] text-white hover:bg-[color:var(--accent-primary)]/90 active:bg-[color:var(--accent-primary)]/80 rounded-lg font-medium transition-all mt-6"
               >
                 Send My Enquiry
               </button>
@@ -195,7 +195,7 @@ export function EnquiryModal() {
               <button
                 type="button"
                 onClick={closeModal}
-                className="btn-secondary w-full"
+                className="inline-flex items-center justify-center px-4 py-2 w-full bg-[color:var(--muted)] text-[color:var(--foreground)] hover:bg-[color:var(--border)] active:bg-[color:var(--border)]/80 rounded-lg font-medium transition-all"
               >
                 Close
               </button>

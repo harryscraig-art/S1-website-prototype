@@ -24,39 +24,48 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="section bg-[color:var(--background)]">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2>How It Works</h2>
-          <p className="text-xl text-[color:var(--muted-foreground)] mt-4">
+        <div className="text-center mb-16 animate-slide-up">
+          <h2 className="text-[color:var(--foreground)]">How It Works</h2>
+          <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
             Simple. Clear. Straightforward.
           </p>
+          <div className="flex justify-center gap-2 mt-6">
+            <div className="w-2 h-2 bg-[color:var(--accent-primary)] rounded-full" />
+            <div className="w-2 h-2 bg-[color:var(--accent-primary)]/40 rounded-full" />
+          </div>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 animate-stagger">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="animate-slide-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group relative"
             >
-              <div className="flex flex-col h-full">
-                {/* Step Number Circle */}
-                <div className="w-12 h-12 bg-[color:var(--accent-primary)] text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+              {/* Teal accent background on hover */}
+              <div className="absolute inset-0 bg-[color:var(--accent-primary)]/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative flex flex-col h-full p-6">
+                {/* Step Number Circle - Teal */}
+                <div className="w-12 h-12 bg-[color:var(--accent-primary)] text-white rounded-full flex items-center justify-center font-bold text-lg mb-4 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
                   {step.number}
                 </div>
 
                 {/* Step Title */}
-                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-[color:var(--foreground)]">{step.title}</h3>
 
                 {/* Step Description */}
                 <p className="text-[color:var(--muted-foreground)] leading-relaxed flex-1">
                   {step.description}
                 </p>
 
-                {/* Checkmark Icon */}
+                {/* Checkmark Icon - Teal */}
                 <div className="mt-6">
-                  <CheckCircle2 size={24} className="text-[color:var(--accent-primary)]" />
+                  <CheckCircle2 size={24} className="text-[color:var(--accent-primary)] group-hover:scale-125 transition-transform duration-300" />
                 </div>
+
+                {/* Bottom teal accent line */}
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-[color:var(--accent-primary)] group-hover:w-full transition-all duration-500 rounded-b-lg" />
               </div>
             </div>
           ))}
