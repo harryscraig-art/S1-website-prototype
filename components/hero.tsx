@@ -4,11 +4,7 @@ import { HelpPanel } from './help-panel'
 
 export function Hero() {
   return (
-    <section className="section relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(to bottom, var(--accent-light), var(--background), var(--background))' }}>
-      {/* Decorative teal accent elements - visible blur circles */}
-      <div className="absolute top-1/4 right-1/4 w-56 h-56 bg-[color:var(--accent-primary)]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl pointer-events-none" />
-
+    <section className="section relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="container-custom">
         <div className="max-w-2xl mx-auto text-center animate-slide-up">
           {/* Teal accent line above heading */}

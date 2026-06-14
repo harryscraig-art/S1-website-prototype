@@ -4,11 +4,7 @@ import { ClipboardCheck } from 'lucide-react'
 
 export function CTASection() {
   return (
-    <section className="section relative overflow-hidden border-t border-[color:var(--border)]/30" style={{ background: 'linear-gradient(135deg, var(--card), var(--background))' }}>
-      {/* Decorative teal elements - visible blur circles */}
-      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-[color:var(--accent-primary)]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl pointer-events-none" />
-
+    <section className="section relative overflow-hidden border-t border-[color:var(--border)]/30">
       <div className="container-custom max-w-3xl text-center animate-slide-up">
         {/* Teal accent line */}
         <div className="flex justify-center mb-6">

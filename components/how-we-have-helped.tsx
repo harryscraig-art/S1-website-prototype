@@ -21,11 +21,7 @@ export function HowWeHaveHelped() {
   ]
 
   return (
-    <section id="outcomes" className="section relative border-t border-[color:var(--border)]/30 overflow-hidden" style={{ background: 'linear-gradient(135deg, var(--card), var(--background))' }}>
-      {/* Decorative teal elements */}
-      <div className="absolute top-1/4 right-1/3 w-80 h-80 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-[color:var(--accent-primary)]/10 rounded-full blur-3xl pointer-events-none" />
-
+    <section id="outcomes" className="section relative border-t border-[color:var(--border)]/30 overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="text-center mb-12 animate-slide-up">
           {/* Teal accent line */}
