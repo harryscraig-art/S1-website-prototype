@@ -23,8 +23,6 @@ export function Services() {
   ]
 
   return (
-    <section id="services" className="section bg-[color:var(--card)]">
-  return (
     <section id="services" className="section bg-[color:var(--background)] border-t border-[color:var(--border)]/30">
       <div className="container-custom">
         <div className="text-center mb-12 animate-slide-up">
@@ -85,8 +83,6 @@ export function Services() {
           </p>
         </div>
       </div>
-    </section>
-  )
     </section>
   )
 }
