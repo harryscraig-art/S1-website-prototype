@@ -31,7 +31,7 @@ export function Footer() {
               <LogoPlaceholder />
             </div>
             <p className="text-sm text-[color:var(--muted-foreground)] leading-relaxed">
-              Turning paperwork problems into clear next steps.
+              Get clear, practical help with important forms, appeals and correspondence.
             </p>
           </div>
 

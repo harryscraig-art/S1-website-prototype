@@ -77,7 +77,7 @@ export function EnquiryModal() {
         {!submitted ? (
           <>
             {/* Modal Header */}
-            <h2 className="text-2xl font-bold mb-2">Tell Us About Your Paperwork</h2>
+            <h2 className="text-2xl font-bold mb-2">Tell Us About Your Forms, Appeals or Correspondence</h2>
             <p className="text-[color:var(--muted-foreground)] mb-6">
               We&apos;ll review your enquiry and get back to you within 24 hours.
             </p>
@@ -119,7 +119,7 @@ export function EnquiryModal() {
               {/* Type of Paperwork */}
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Type of Paperwork
+                  What Do You Need Help With?
                 </label>
                 <select
                   name="paperworkType"

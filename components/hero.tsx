@@ -14,7 +14,7 @@ export function Hero() {
 
           {/* Hero Headline */}
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-[color:var(--foreground)]">
-            Overwhelmed by paperwork?
+            Struggling with forms and appeals?
           </h1>
 
           {/* Decorative line separator */}
@@ -25,7 +25,7 @@ export function Hero() {
 
           {/* Hero Subheadline */}
           <p className="text-xl md:text-2xl text-[color:var(--accent-primary)] font-semibold mb-6">
-            Turning paperwork problems into clear next steps.
+            Get clear, practical help with important forms, appeals and correspondence.
           </p>
 
           {/* Hero Description */}
@@ -44,7 +44,7 @@ export function Hero() {
             className="inline-flex items-center justify-center px-8 py-4 bg-[color:var(--accent-primary)] text-white hover:bg-[color:var(--accent-primary)]/90 active:bg-[color:var(--accent-primary)]/80 rounded-lg font-medium transition-all duration-300 text-lg gap-2 hover:shadow-lg hover:scale-105 animate-scale-in"
             style={{ animationDelay: '0.2s' }}
           >
-            Get Help With My Paperwork
+            Get Help With My Forms & Appeals
           </button>
 
           {/* Help Panel */}

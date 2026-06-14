@@ -71,7 +71,7 @@ export function HowWeHaveHelped() {
         {/* Additional Services Text */}
         <div className="text-center animate-fade-in">
           <p className="text-[color:var(--muted-foreground)] text-lg">
-            And many other forms, complaints, applications, appeals and evidence packs.
+            And many other situations involving forms, appeals, correspondence, complaints and evidence.
           </p>
         </div>
       </div>
