@@ -30,7 +30,7 @@ export function FAQ() {
     {
       question: 'What happens after I submit my enquiry?',
       answer:
-        'We&apos;ll review your enquiry and get back to you within 24 hours to discuss your paperwork, answer questions, and explain our next steps. No obligation.',
+        'We review what you send us and get back to you within 24 hours. We&apos;ll explain whether we can help with your paperwork and discuss next steps. There&apos;s no obligation at any point.',
     },
     {
       question: 'Can you help with all types of paperwork?',
