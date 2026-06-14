@@ -1,13 +1,20 @@
 'use client'
 
+import { ClipboardCheck } from 'lucide-react'
+
 export function CTASection() {
   return (
-    <section className="section relative overflow-hidden bg-gradient-to-br from-[color:var(--accent-light)] via-[color:var(--background)] to-[color:var(--card)]">
-      {/* Decorative teal elements */}
-      <div className="absolute top-10 left-10 w-64 h-64 bg-[color:var(--accent-primary)]/10 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 right-20 w-80 h-80 bg-[color:var(--accent-primary)]/5 rounded-full blur-3xl -z-10" />
+    <section className="section relative overflow-hidden bg-[color:var(--card)] border-t border-[color:var(--border)]/30">
+      {/* Decorative teal elements - increased opacity */}
+      <div className="absolute top-10 left-10 w-64 h-64 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 right-20 w-80 h-80 bg-[color:var(--accent-primary)]/8 rounded-full blur-3xl -z-10" />
 
       <div className="container-custom max-w-3xl text-center animate-slide-up">
+        {/* Teal accent line */}
+        <div className="flex justify-center mb-6">
+          <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
+        </div>
+
         <h2 className="mb-6 text-[color:var(--foreground)]">Ready to get organised?</h2>
 
         {/* Decorative line accent */}
@@ -37,9 +44,14 @@ export function CTASection() {
           Get Help With My Paperwork
         </button>
 
-        <p className="text-sm text-[color:var(--muted-foreground)] mt-10 bg-[color:var(--accent-light)]/30 dark:bg-[color:var(--accent-primary)]/10 p-4 rounded-lg border-l-4 border-[color:var(--accent-primary)]">
-          Quick enquiry form. No obligation. We&apos;ll be in touch within 24 hours.
-        </p>
+        {/* Updated enquiry text with calm icon */}
+        <div className="text-sm text-[color:var(--muted-foreground)] mt-10 bg-[color:var(--accent-light)]/30 dark:bg-[color:var(--accent-primary)]/10 p-4 rounded-lg border-l-4 border-[color:var(--accent-primary)]">
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <ClipboardCheck size={18} className="text-[color:var(--accent-primary)] flex-shrink-0" />
+            <span className="font-medium">Not sure where to start?</span>
+          </div>
+          <p>Send a short message and we&apos;ll take it from there.</p>
+        </div>
       </div>
     </section>
   )

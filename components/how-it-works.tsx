@@ -1,42 +1,43 @@
 'use client'
 
 import { CheckCircle2 } from 'lucide-react'
+import { HelpPanel } from './help-panel'
 
 export function HowItWorks() {
   const steps = [
     {
       number: '1',
-      title: 'Tell Us About Your Paperwork',
-      description: 'Share what you\'re dealing with—forms, letters, appeals, or evidence. No jargon needed.',
+      title: 'Tell us what\'s confusing you',
+      description: 'Send a short message about the paperwork, deadline or problem you are dealing with.',
     },
     {
       number: '2',
-      title: 'We Assess & Organise',
-      description: 'We review everything, understand the key issues, and create a clear picture of what needs to happen.',
+      title: 'We organise the issue',
+      description: 'We review the information, identify the key documents and help make sense of what needs doing.',
     },
     {
       number: '3',
-      title: 'Get Your Action Plan',
-      description: 'Receive an organised summary with clear next steps, timelines, and everything you need to move forward.',
+      title: 'You get clear next steps',
+      description: 'You receive a clear summary of the next actions, priorities and paperwork needed to move forward.',
     },
   ]
 
   return (
-    <section id="how-it-works" className="section bg-[color:var(--background)]">
+    <section id="how-it-works" className="section bg-[color:var(--card)] border-t border-[color:var(--border)]/30">
       <div className="container-custom">
-        <div className="text-center mb-16 animate-slide-up">
+        <div className="text-center mb-12 animate-slide-up">
+          {/* Teal accent line */}
+          <div className="flex justify-center mb-4">
+            <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
+          </div>
           <h2 className="text-[color:var(--foreground)]">How It Works</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
             Simple. Clear. Straightforward.
           </p>
-          <div className="flex justify-center gap-2 mt-6">
-            <div className="w-2 h-2 bg-[color:var(--accent-primary)] rounded-full" />
-            <div className="w-2 h-2 bg-[color:var(--accent-primary)]/40 rounded-full" />
-          </div>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid md:grid-cols-3 gap-8 animate-stagger">
+        <div className="grid md:grid-cols-3 gap-8 mb-12 animate-stagger">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -70,6 +71,12 @@ export function HowItWorks() {
             </div>
           ))}
         </div>
+
+        {/* Help Panel */}
+        <HelpPanel
+          closedLabel="What happens after I send a message?"
+          openCopy="You send a short enquiry, we look at the type of paperwork involved, and we explain whether it is suitable for document support. If it is, the next step is agreed by email."
+        />
       </div>
     </section>
   )

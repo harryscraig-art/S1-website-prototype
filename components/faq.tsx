@@ -40,17 +40,17 @@ export function FAQ() {
   ]
 
   return (
-    <section id="faq" className="section bg-[color:var(--card)]">
+    <section id="faq" className="section bg-[color:var(--background)] border-t border-[color:var(--border)]/30">
       <div className="container-custom max-w-2xl">
-        <div className="text-center mb-16 animate-slide-up">
+        <div className="text-center mb-12 animate-slide-up">
+          {/* Teal accent line */}
+          <div className="flex justify-center mb-4">
+            <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
+          </div>
           <h2 className="text-[color:var(--foreground)]">Frequently Asked Questions</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
             Common questions about our support
           </p>
-          <div className="flex justify-center gap-2 mt-6">
-            <div className="w-2 h-2 bg-[color:var(--accent-primary)] rounded-full" />
-            <div className="w-2 h-2 bg-[color:var(--accent-primary)]/40 rounded-full" />
-          </div>
         </div>
 
         {/* FAQ Items */}

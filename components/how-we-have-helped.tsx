@@ -21,20 +21,20 @@ export function HowWeHaveHelped() {
   ]
 
   return (
-    <section id="outcomes" className="section bg-[color:var(--background)] relative overflow-hidden">
-      {/* Decorative teal elements */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-[color:var(--accent-primary)]/5 rounded-full blur-3xl -z-10" />
+    <section id="outcomes" className="section bg-[color:var(--card)] border-t border-[color:var(--border)]/30 relative overflow-hidden">
+      {/* Decorative teal elements - increased opacity */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-[color:var(--accent-primary)]/8 rounded-full blur-3xl -z-10" />
 
       <div className="container-custom">
-        <div className="text-center mb-16 animate-slide-up">
+        <div className="text-center mb-12 animate-slide-up">
+          {/* Teal accent line */}
+          <div className="flex justify-center mb-4">
+            <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
+          </div>
           <h2 className="text-[color:var(--foreground)]">How We Have Helped</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
             Real examples of the types of support we provide
           </p>
-          <div className="flex justify-center gap-2 mt-6">
-            <div className="w-2 h-2 bg-[color:var(--accent-primary)] rounded-full" />
-            <div className="w-2 h-2 bg-[color:var(--accent-primary)]/40 rounded-full" />
-          </div>
         </div>
 
         {/* Examples Grid */}
@@ -42,7 +42,7 @@ export function HowWeHaveHelped() {
           {examples.map((example, index) => (
             <div
               key={index}
-              className="group relative bg-[color:var(--card)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden"
+              className="group relative bg-[color:var(--background)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden"
             >
               {/* Teal accent background on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--accent-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

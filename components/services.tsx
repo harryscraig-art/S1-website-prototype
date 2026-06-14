@@ -1,6 +1,7 @@
 'use client'
 
 import { FileText, Mail, Scale } from 'lucide-react'
+import { HelpPanel } from './help-panel'
 
 export function Services() {
   const services = [
@@ -23,26 +24,28 @@ export function Services() {
 
   return (
     <section id="services" className="section bg-[color:var(--card)]">
+  return (
+    <section id="services" className="section bg-[color:var(--background)] border-t border-[color:var(--border)]/30">
       <div className="container-custom">
-        <div className="text-center mb-16 animate-slide-up">
+        <div className="text-center mb-12 animate-slide-up">
+          {/* Teal accent line */}
+          <div className="flex justify-center mb-4">
+            <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
+          </div>
           <h2 className="text-[color:var(--foreground)]">What We Help With</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
             Document support across a wide range of situations
           </p>
-          <div className="flex justify-center gap-2 mt-6">
-            <div className="w-2 h-2 bg-[color:var(--accent-primary)] rounded-full" />
-            <div className="w-2 h-2 bg-[color:var(--accent-primary)]/40 rounded-full" />
-          </div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 animate-stagger">
+        <div className="grid md:grid-cols-3 gap-8 mb-12 animate-stagger">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
               <div
                 key={index}
-                className="group relative bg-[color:var(--background)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden"
+                className="group relative bg-[color:var(--card)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden"
               >
                 {/* Teal accent background on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--accent-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -69,6 +72,12 @@ export function Services() {
           })}
         </div>
 
+        {/* Help Panel */}
+        <HelpPanel
+          closedLabel="What paperwork can you help with?"
+          openCopy="We can help with forms, complaints, applications, appeal papers, evidence packs, council correspondence, benefits paperwork, school admissions paperwork and family court preparation documents."
+        />
+
         {/* Additional Services Text */}
         <div className="text-center mt-16 animate-fade-in">
           <p className="text-[color:var(--muted-foreground)] text-lg">
@@ -76,6 +85,8 @@ export function Services() {
           </p>
         </div>
       </div>
+    </section>
+  )
     </section>
   )
 }
