@@ -63,7 +63,7 @@ NOT:
 ├── Hero Section (intro + accent card + visual)
 ├── How It Works (3-step process)
 ├── Services Overview (3 service cards)
-├── Example Outcomes / Before & After (3 realistic scenarios)
+├── How We Have Helped (4 anonymised real-life examples)
 ├── FAQ Section (5–7 questions)
 ├── Primary CTA Section (reinforces "Get Help With My Paperwork")
 ├── Footer (branding + trust + links)
@@ -74,7 +74,7 @@ NOT:
 1. Hero → Establish trust + value proposition ("Overwhelmed by paperwork?" + "Turning paperwork problems into clear next steps")
 2. How It Works → Reduce friction/anxiety
 3. Services → Show what's covered
-4. Example Scenarios → Build confidence (use three realistic provided examples)
+4. How We Have Helped → Build confidence (use four anonymised real-life examples)
 5. FAQ → Address objections (cost, confidentiality, legal vs. support)
 6. CTA Section → Final conversion push
 7. Footer → Trust signals + legal compliance
@@ -123,7 +123,7 @@ components/
 | Hero | 120–180 | Headline, value prop, accent visual |
 | HowItWorks | 100–150 | Process steps, reassurance |
 | Services | 100–140 | Service cards, icons |
-| Outcomes | 120–160 | Example scenarios (3 realistic but fictional case examples) |
+| Outcomes | 160–200 | Four anonymised real-life examples of support provided |
 | FAQ | 150–200 | Accordion or card-based Q&A |
 | CTASection | 80–120 | Reinforcement + button |
 | Footer | 100–150 | Branding, links, disclaimer |
@@ -386,25 +386,22 @@ og:url: [production domain]
 
 ---
 
-## 12. EXAMPLE SCENARIOS (Outcomes Section)
+## 12. HOW WE HAVE HELPED (Outcomes Section)
 
-### Three Realistic Example Cases
-Present as illustrative examples only; do not imply real client matters.
+### Four Anonymised Real-Life Examples
+Present as examples of the types of paperwork support provided. Do not describe as fictional, call them testimonials, imply guaranteed outcomes, or include identifying information.
 
-**Example 1: Non-Molestation Order Application**
-- User overwhelmed after being unable to obtain legal aid
-- Needs help preparing paperwork for urgent non-molestation order application
-- **Visual:** Scattered documents → organized pack
+**Example 1: Non-Molestation Order Paperwork**
+Feeling overwhelmed after being unable to obtain legal aid and needing help preparing paperwork for an urgent non-molestation order application.
 
-**Example 2: Council Tax Arrears**
-- Receiving multiple letters, notices, council correspondence
-- Needs help understanding paperwork, organizing documents, preparing clear response
-- **Visual:** Confusing letters → clear response structure
+**Example 2: Benefits Mandatory Reconsideration**
+Needing help understanding a benefits decision, organising medical evidence and preparing clear paperwork for a mandatory reconsideration.
 
 **Example 3: School Admissions Appeal**
-- Confused by long emails, appeal papers, guidance, supporting evidence from council
-- Needs help organizing everything into clear, manageable bundle
-- **Visual:** Appeal chaos → structured bundle
+Feeling confused by long emails, appeal papers, guidance documents and supporting evidence received from the council, and needing help organising everything into a clear and manageable bundle.
+
+**Example 4: Council Tax Arrears Correspondence**
+Receiving multiple letters, notices and council correspondence relating to council tax arrears and needing help understanding the paperwork, organising documents and preparing a clear response.
 
 **Supporting Text Below Examples:**
 "And many other forms, complaints, applications, appeals and evidence packs."
@@ -420,7 +417,7 @@ Present as illustrative examples only; do not imply real client matters.
 2. **Placeholder Logo:** Use text-based "Supportology" logo; user will provide final brand assets later.
 3. **Accent Colour Confirmed:** Professional teal (trust, calmness, clarity, support).
 4. **No Real File Uploads:** Upload references are placeholder text only; no secure upload system.
-5. **Example Scenarios:** Three realistic but clearly fictional case studies (no real client data implied).
+5. **How We Have Helped:** Four anonymised real-life examples of support provided (no identifying information).
 6. **Single Font:** Geist throughout; no secondary fonts.
 7. **Light Mode Default:** Dark mode is optional enhancement; light mode is primary experience.
 8. **Mobile-First Built:** Desktop experience enhanced from mobile baseline.
@@ -577,7 +574,7 @@ Include all of the following:
 2. Hero Section ("Overwhelmed by paperwork?" + accent card)
 3. How It Works (3-step process)
 4. Services Overview (3 service cards)
-5. Example Scenarios (3 realistic fictional cases + "many others" text)
+5. How We Have Helped (4 anonymised real-life examples + "many others" text)
 6. FAQ (5–7 questions addressing objections)
 7. Primary CTA Section (reinforcement + button)
 8. Footer (branding, trust, links, email, legal, disclaimer)
