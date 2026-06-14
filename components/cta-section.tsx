@@ -6,20 +6,9 @@ export function CTASection() {
   return (
     <section className="section relative overflow-hidden border-t border-[color:var(--border)]/30">
       <div className="container-custom max-w-3xl text-center animate-slide-up">
-        {/* Teal accent line */}
-        <div className="flex justify-center mb-6">
-          <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
-        </div>
+        <h2 className="mb-8 text-[color:var(--foreground)]">Do not let important paperwork sit unresolved.</h2>
 
-        <h2 className="mb-6 text-[color:var(--foreground)]">Do not let important paperwork sit unresolved.</h2>
-
-        {/* Decorative line accent */}
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
-          <div className="w-8 h-1 bg-[color:var(--accent-primary)]/40 rounded-full" />
-        </div>
-
-        <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-3">
+        <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-4">
           Send a short message and we&apos;ll help you work out whether document support is the right next step.
         </p>
 
