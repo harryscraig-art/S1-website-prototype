@@ -5,9 +5,9 @@ import { ClipboardCheck } from 'lucide-react'
 export function CTASection() {
   return (
     <section className="section relative overflow-hidden bg-[color:var(--card)] border-t border-[color:var(--border)]/30">
-      {/* Decorative teal elements - increased opacity */}
-      <div className="absolute top-10 left-10 w-64 h-64 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-0 right-20 w-80 h-80 bg-[color:var(--accent-primary)]/8 rounded-full blur-3xl -z-10" />
+      {/* Decorative teal elements - increased opacity and size */}
+      <div className="absolute top-0 left-0 w-80 h-80 bg-[color:var(--accent-primary)]/15 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl -z-10" />
 
       <div className="container-custom max-w-3xl text-center animate-slide-up">
         {/* Teal accent line */}
@@ -44,14 +44,23 @@ export function CTASection() {
           Get Help With My Paperwork
         </button>
 
-        {/* Updated enquiry text with calm icon */}
-        <div className="text-sm text-[color:var(--muted-foreground)] mt-10 bg-[color:var(--accent-light)]/30 dark:bg-[color:var(--accent-primary)]/10 p-4 rounded-lg border-l-4 border-[color:var(--accent-primary)]">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <ClipboardCheck size={18} className="text-[color:var(--accent-primary)] flex-shrink-0" />
-            <span className="font-medium">Not sure where to start?</span>
+        {/* Updated enquiry text with calm icon - clickable */}
+        <button
+          onClick={() => {
+            const modal = document.getElementById('enquiry-modal')
+            if (modal) {
+              ;(modal as HTMLDialogElement).showModal()
+            }
+          }}
+          type="button"
+          className="w-full text-sm text-[color:var(--muted-foreground)] mt-10 bg-[color:var(--accent-light)]/30 dark:bg-[color:var(--accent-primary)]/10 p-4 rounded-lg border-l-4 border-[color:var(--accent-primary)] hover:bg-[color:var(--accent-light)]/50 dark:hover:bg-[color:var(--accent-primary)]/20 transition-all duration-200 text-left cursor-pointer group"
+        >
+          <div className="flex items-center justify-start gap-3 mb-2">
+            <ClipboardCheck size={18} className="text-[color:var(--accent-primary)] flex-shrink-0 group-hover:scale-110 transition-transform" />
+            <span className="font-medium text-[color:var(--foreground)] group-hover:text-[color:var(--accent-primary)] transition-colors">Not sure where to start?</span>
           </div>
           <p>Send a short message and we&apos;ll take it from there.</p>
-        </div>
+        </button>
       </div>
     </section>
   )

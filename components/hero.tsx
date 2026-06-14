@@ -8,9 +8,9 @@ export function Hero() {
       {/* Animated Background with Teal Depth - increased visibility */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[color:var(--accent-light)] via-[color:var(--background)] to-[color:var(--background)]" />
       
-      {/* Decorative teal accent elements - increased opacity */}
-      <div className="absolute top-10 right-10 w-40 h-40 bg-[color:var(--accent-primary)]/8 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-20 left-5 w-60 h-60 bg-[color:var(--accent-primary)]/7 rounded-full blur-3xl -z-10" />
+      {/* Decorative teal accent elements - increased and visible */}
+      <div className="absolute top-20 right-20 w-56 h-56 bg-[color:var(--accent-primary)]/15 rounded-full blur-3xl -z-10" />
+      <div className="absolute -bottom-20 -left-10 w-72 h-72 bg-[color:var(--accent-primary)]/12 rounded-full blur-3xl -z-10" />
 
       <div className="container-custom">
         <div className="max-w-2xl mx-auto text-center animate-slide-up">
