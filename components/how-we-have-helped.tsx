@@ -1,22 +1,28 @@
 'use client'
 
+import { Shield, FileText, BookOpen, AlertCircle } from 'lucide-react'
+
 export function HowWeHaveHelped() {
   const examples = [
     {
       title: 'Non-Molestation Order Paperwork',
-      description: 'Feeling overwhelmed after being unable to obtain legal aid and needing help preparing paperwork for an urgent non-molestation order application.',
+      description: 'Support with preparing urgent paperwork after being unable to obtain legal aid for a non-molestation order application.',
+      icon: Shield,
     },
     {
       title: 'Benefits Mandatory Reconsideration',
-      description: 'Needing help understanding a benefits decision, organising medical evidence and preparing clear paperwork for a mandatory reconsideration.',
+      description: 'Help understanding a benefits decision, organising medical evidence and preparing clear paperwork for a mandatory reconsideration.',
+      icon: FileText,
     },
     {
       title: 'School Admissions Appeal',
-      description: 'Feeling confused by long emails, appeal papers, guidance documents and supporting evidence received from the council, and needing help organising everything into a clear and manageable bundle.',
+      description: 'Support organising long emails, appeal papers, guidance documents and evidence into a clear school admissions appeal bundle.',
+      icon: BookOpen,
     },
     {
       title: 'Council Tax Arrears Correspondence',
-      description: 'Receiving multiple letters, notices and council correspondence relating to council tax arrears and needing help understanding the paperwork, organising documents and preparing a clear response.',
+      description: 'Help making sense of multiple letters, notices, chronology and council tax arrears correspondence, then organising the documents for a clear response.',
+      icon: AlertCircle,
     },
   ]
 
@@ -51,9 +57,7 @@ export function HowWeHaveHelped() {
                 {/* Icon + Title */}
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-8 h-8 bg-[color:var(--accent-primary)]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[color:var(--accent-primary)]/40 transition-colors duration-300">
-                    <svg className="w-5 h-5 text-[color:var(--accent-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                    </svg>
+                    <example.icon className="w-5 h-5 text-[color:var(--accent-primary)]" />
                   </div>
                   <h3 className="text-lg font-bold text-[color:var(--foreground)] group-hover:text-[color:var(--accent-primary)] transition-colors duration-300">
                     {example.title}
