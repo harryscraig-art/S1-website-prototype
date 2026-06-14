@@ -17,10 +17,10 @@ export function Hero() {
             Overwhelmed by paperwork?
           </h1>
 
-          {/* Decorative line accent */}
-          <div className="flex items-center justify-center gap-4 mb-8">
+          {/* Decorative line separator */}
+          <div className="flex items-center justify-center gap-3 mb-8">
             <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
-            <div className="w-8 h-1 bg-[color:var(--accent-primary)]/40 rounded-full" />
+            <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
           </div>
 
           {/* Hero Subheadline */}
