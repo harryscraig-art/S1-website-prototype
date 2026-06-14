@@ -6,7 +6,33 @@
 
 ---
 
-## 1. ARCHITECTURE OVERVIEW
+## 1. CORE OBJECTIVE & MESSAGING
+
+### Brand Positioning
+Supportology helps people overwhelmed by paperwork, forms, correspondence, complaints, appeals, and evidence.
+
+The website should feel:
+- Calm, trustworthy, human, organised, reassuring, professional, accessible
+
+NOT:
+- Corporate, luxury, flashy, overdesigned, generic SaaS, crypto-style
+
+**Target User Profile:** Stressed, overwhelmed, confused, unsure where to start. Often unable to access legal aid. Needs plain English, no jargon.
+
+### Hero Headlines
+- **Primary:** "Overwhelmed by paperwork?"
+- **Subheadline:** "Turning paperwork problems into clear next steps."
+
+### Primary CTA
+- **Button Text:** "Get Help With My Paperwork"
+- **Alternative:** "Help Me With My Documents"
+- **Tone:** Plain English, accessible, reassuring (not corporate or legalistic)
+
+---
+
+---
+
+## 2. ARCHITECTURE OVERVIEW
 
 ### Tech Stack
 - **Framework:** Next.js 16 (App Router)
@@ -29,7 +55,7 @@
 
 ---
 
-## 2. PAGE STRUCTURE
+## 3. PAGE STRUCTURE
 
 ### Full-Width Single-Page Layout
 ```
@@ -45,17 +71,17 @@
 ```
 
 ### Section Priority (Conversion-Focused)
-1. Hero → Establish trust + value proposition
+1. Hero → Establish trust + value proposition ("Overwhelmed by paperwork?" + "Turning paperwork problems into clear next steps")
 2. How It Works → Reduce friction/anxiety
 3. Services → Show what's covered
-4. Outcomes → Build confidence
+4. Example Scenarios → Build confidence (use three realistic provided examples)
 5. FAQ → Address objections (cost, confidentiality, legal vs. support)
 6. CTA Section → Final conversion push
 7. Footer → Trust signals + legal compliance
 
 ---
 
-## 3. COMPONENT STRUCTURE
+## 4. COMPONENT STRUCTURE
 
 ### Target: ~600 lines maximum per file
 
@@ -97,7 +123,7 @@ components/
 | Hero | 120–180 | Headline, value prop, accent visual |
 | HowItWorks | 100–150 | Process steps, reassurance |
 | Services | 100–140 | Service cards, icons |
-| Outcomes | 120–160 | Example scenarios, before/after |
+| Outcomes | 120–160 | Example scenarios (3 realistic but fictional case examples) |
 | FAQ | 150–200 | Accordion or card-based Q&A |
 | CTASection | 80–120 | Reinforcement + button |
 | Footer | 100–150 | Branding, links, disclaimer |
@@ -106,7 +132,7 @@ components/
 
 ---
 
-## 4. THEME STRATEGY
+## 5. THEME STRATEGY
 
 ### Design Tokens (CSS Variables in globals.css)
 
@@ -140,12 +166,40 @@ components/
 --glass-backdrop: blur(8px)
 ```
 
-### Accent Colour Selection
-**Question:** What is your preferred accent colour?
-- Options: Teal, Blue, Green, Warm Coral, Slate
-- This will be applied to buttons, links, highlights, focus states
+### Dark Mode
+- **Default:** Light mode (primary experience)
+- **Toggle:** Dark mode toggle in navbar
+- **Implementation:** next-themes + CSS variables for both themes
+- **Consistency:** All components, cards, forms, modals, CTAs support both themes
 
-**Recommendation:** Calm, trustworthy tone suggests teal or cool blue.
+### Dynamic Background
+Premium paper-inspired depth with subtle layered effect.
+
+**Preferred Approach:**
+- Subtle layered paper-inspired depth
+- Abstract document structure
+- Soft architectural grid elements
+- Gentle light movement
+
+**Avoid:**
+- Floating blobs
+- Particle effects
+- Crypto/SaaS visual styles
+- Excessive gradients
+- Flying documents
+
+**Effect Goal:** Create sense of organisation, clarity, calm. User should notice professionalism, not the animation. Background supports content, does not compete.
+
+### Glass/Frosted Effects
+Use sparingly, only on:
+- Navbar background
+- Hero accent card
+- Key CTA section if appropriate
+
+Do NOT apply to:
+- All feature cards
+- All service cards
+- Every section
 
 ### Typography
 - **Font:** Geist (or Inter as fallback)
@@ -157,7 +211,7 @@ components/
 
 ---
 
-## 5. MODAL STRATEGY
+## 6. MODAL STRATEGY
 
 ### EnquiryModal Component
 
@@ -199,7 +253,7 @@ components/
 
 ---
 
-## 6. NAVIGATION STRATEGY
+## 7. NAVIGATION STRATEGY
 
 ### Desktop Navigation
 - Sticky navbar (top)
@@ -222,7 +276,7 @@ components/
 
 ---
 
-## 7. MOBILE STRATEGY
+## 8. MOBILE STRATEGY
 
 ### Responsive Breakpoints
 - **Mobile:** < 640px (stacked layout, full-width)
@@ -243,7 +297,7 @@ components/
 
 ---
 
-## 8. SEO STRATEGY
+## 9. SEO STRATEGY
 
 ### Metadata (Next.js Layout Metadata)
 ```
@@ -274,7 +328,7 @@ og:url: [production domain]
 
 ---
 
-## 9. ANIMATION STRATEGY
+## 10. ANIMATION STRATEGY
 
 ### Enabled Animations
 ✓ **Scroll-in animations:** Fade + slight upward slide (50–100ms, Tailwind)
@@ -299,7 +353,7 @@ og:url: [production domain]
 
 ---
 
-## 10. ACCESSIBILITY STRATEGY
+## 11. ACCESSIBILITY STRATEGY
 
 ### Keyboard Navigation
 - Tab through all interactive elements
@@ -332,19 +386,51 @@ og:url: [production domain]
 
 ---
 
-## 11. ASSUMPTIONS & CONSTRAINTS
+## 12. EXAMPLE SCENARIOS (Outcomes Section)
+
+### Three Realistic Example Cases
+Present as illustrative examples only; do not imply real client matters.
+
+**Example 1: Non-Molestation Order Application**
+- User overwhelmed after being unable to obtain legal aid
+- Needs help preparing paperwork for urgent non-molestation order application
+- **Visual:** Scattered documents → organized pack
+
+**Example 2: Council Tax Arrears**
+- Receiving multiple letters, notices, council correspondence
+- Needs help understanding paperwork, organizing documents, preparing clear response
+- **Visual:** Confusing letters → clear response structure
+
+**Example 3: School Admissions Appeal**
+- Confused by long emails, appeal papers, guidance, supporting evidence from council
+- Needs help organizing everything into clear, manageable bundle
+- **Visual:** Appeal chaos → structured bundle
+
+**Supporting Text Below Examples:**
+"And many other forms, complaints, applications, appeals and evidence packs."
+
+**Section Goal:** Visitors should recognize situations similar to their own and understand that Supportology helps move from confusion/overwhelm towards clarity/action.
+
+---
+
+## 13. ASSUMPTIONS & CONSTRAINTS
 
 ### Assumptions
 1. **No Backend Required:** Form submission is placeholder; no actual email or database storage.
-2. **Placeholder Logo:** Logo area left for user to add final branding asset later.
-3. **Placeholder Accent Colour:** Awaiting user input on primary accent colour.
-4. **No Real File Uploads:** Upload references are placeholder text only.
-5. **Example Scenarios:** Case studies are fictional but realistic; no real client data.
-6. **Single Font:** All text uses Geist or Inter; no secondary fonts.
-7. **Light Mode Default:** Dark mode is optional enhancement; light mode is primary.
+2. **Placeholder Logo:** Use text-based "Supportology" logo; user will provide final brand assets later.
+3. **Accent Colour Confirmed:** Professional teal (trust, calmness, clarity, support).
+4. **No Real File Uploads:** Upload references are placeholder text only; no secure upload system.
+5. **Example Scenarios:** Three realistic but clearly fictional case studies (no real client data implied).
+6. **Single Font:** Geist throughout; no secondary fonts.
+7. **Light Mode Default:** Dark mode is optional enhancement; light mode is primary experience.
 8. **Mobile-First Built:** Desktop experience enhanced from mobile baseline.
 9. **Minimal Motion:** No parallax, floating elements, or excessive animation.
 10. **No External Tools:** No Calendly, Typeform, payment gateways, or 3rd-party integrations.
+11. **No Generated Visuals:** Use placeholder containers only; no AI-generated images, illustrations, or logos.
+12. **Premium Minimal Aesthetic:** Paper-inspired depth background, calm, trustworthy, professional, not corporate or flashy.
+13. **Modal on Homepage:** Contact form opens as overlay; no separate contact page.
+14. **Footer Disclaimer:** Includes statement: "Supportology provides document support and preparation assistance. We do not provide regulated legal advice."
+15. **Responsive Design:** Mobile, tablet, and desktop fully functional.
 
 ### Constraints
 - **No Backend:** Frontend prototype only; no server actions or APIs.
@@ -352,11 +438,13 @@ og:url: [production domain]
 - **No Auth:** No user accounts or protected pages.
 - **Single Page:** No multi-page navigation; all content on one scrollable page.
 - **Max Component Size:** ~600 lines per file to avoid refactoring burden.
-- **Minimal Dependencies:** Use built-in Next.js, Tailwind, lucide-react, next-themes only.
+- **Minimal Dependencies:** Next.js 16, Tailwind CSS v4, lucide-react, next-themes only.
+- **No Generated Assets:** No AI images, illustrations, or logos; placeholder-only.
+- **Premium Minimal:** No flashy effects, crypto-style visuals, or corporate aesthetics.
 
 ---
 
-## 12. RISKS & TRADE-OFFS
+## 14. RISKS & TRADE-OFFS
 
 ### Risks
 
@@ -381,7 +469,7 @@ og:url: [production domain]
 
 ---
 
-## 13. RECOMMENDED IMPLEMENTATION ORDER
+## 15. RECOMMENDED IMPLEMENTATION ORDER
 
 ### Phase 1: Foundation (Project Setup)
 1. Initialize Next.js 16 project
@@ -426,27 +514,97 @@ og:url: [production domain]
 
 ---
 
-## 14. BUILD CHECKLIST (Before Writing Code)
+## 16. FOOTER REQUIREMENTS
 
-### Missing Information — Please Confirm:
+Include all of the following:
+- Supportology logo/brand name (text-based placeholder)
+- Short trust statement
+- Navigation links (anchor to main sections or pages)
+- Email: help@supportology.co.uk
+- Legal links:
+  - Privacy Policy
+  - Terms of Service
+  - Complaints Procedure
+- **Disclaimer:** "Supportology provides document support and preparation assistance. We do not provide regulated legal advice."
 
-1. **Accent Colour:** Which colour for primary buttons, links, and highlights?
-   - Options: Teal, Blue, Green, Warm Coral, Slate, or other?
+**Theme Support:** Light and dark mode consistent styling.
 
-2. **Logo Placeholder:** Should I include a text-based "Supportology" logo or a simple geometric shape as placeholder?
-
-3. **Visual Assets:** Should I generate abstract minimal visuals (document layers, checklists, etc.) using GenerateImage tool or use placeholder blocks?
-
-4. **Footer Email:** Placeholder text "help@supportology.co.uk" — correct?
-
-5. **Example Scenarios:** Use the three examples you provided?
-   - Unsorted emails → organized evidence pack
-   - Council correspondence → clear response
-   - Appeal papers → structured submission
+**Aesthetic:** Calm, minimal, trustworthy, professional.
 
 ---
 
-## 15. SUCCESS CRITERIA
+## 17. BUILD CHECKLIST (FINAL CONFIRMATION)
+
+## 17. BUILD CHECKLIST (FINAL CONFIRMATION)
+
+### All Requirements Confirmed:
+
+✅ **Core Messaging**
+- Hero: "Overwhelmed by paperwork?" + "Turning paperwork problems into clear next steps."
+- CTA: "Get Help With My Paperwork"
+- Tone: Plain English, accessible, reassuring, not corporate
+
+✅ **Modal & Form**
+- Opens as overlay on homepage (no separate contact page)
+- Fields: Name, Email, Type of paperwork, Deadline, Short message
+- No file uploads or backend processing
+- Confirmation state after submission
+- Smooth scroll to top after close
+
+✅ **Design System**
+- Accent Colour: Professional teal
+- Font: Geist (single font throughout)
+- Theme: Light mode default + dark mode toggle
+- Responsive: Mobile, tablet, desktop
+- Glass effects: Navbar, hero accent card, optional CTA section only
+- Animations: Subtle scroll-in, hover, focus, modal transitions (no parallax, floating, excessive motion)
+
+✅ **Background**
+- Premium paper-inspired depth
+- Subtle layered, abstract document structure
+- Soft architectural grid elements
+- Gentle light movement
+- NOT: floating blobs, particles, crypto effects, excessive gradients
+
+✅ **Visual Assets**
+- Placeholder containers only
+- NO generated images, illustrations, or logos
+- Text-based "Supportology" logo placeholder
+- User will add final brand assets
+
+✅ **Page Structure**
+1. Sticky Navbar (logo, nav links, dark toggle, CTA)
+2. Hero Section ("Overwhelmed by paperwork?" + accent card)
+3. How It Works (3-step process)
+4. Services Overview (3 service cards)
+5. Example Scenarios (3 realistic fictional cases + "many others" text)
+6. FAQ (5–7 questions addressing objections)
+7. Primary CTA Section (reinforcement + button)
+8. Footer (branding, trust, links, email, legal, disclaimer)
+
+✅ **Footer**
+- Logo placeholder + trust statement
+- Navigation links
+- Email: help@supportology.co.uk
+- Privacy Policy, Terms, Complaints links
+- Disclaimer: "Supportology provides document support and preparation assistance. We do not provide regulated legal advice."
+
+✅ **Component Architecture**
+- 8 main components
+- Max ~600 lines per file
+- Semantic HTML, proper heading hierarchy
+- SEO metadata included
+- Accessibility best practices (keyboard nav, focus states, ARIA, colour contrast)
+
+✅ **Prototype Constraints**
+- Frontend only (no backend, auth, database, payments)
+- No external integrations
+- Placeholder form submission
+- Clean, maintainable, scalable code
+
+---
+
+## 18. SUCCESS CRITERIA
 
 ✓ Pixel-perfect responsive design (mobile, tablet, desktop)
 ✓ All CTAs trigger modal correctly
@@ -464,13 +622,22 @@ og:url: [production domain]
 
 ---
 
-## 16. NEXT STEPS
+## 19. NEXT STEPS
 
-1. **Confirm missing information** (Section 14 above)
-2. **Approve this plan**
-3. **Reply with "BUILD"** to trigger implementation
-4. Implementation will proceed in order: Foundation → Components → Interactivity → Polish
+1. ✅ Implementation plan updated with all final requirements
+2. ⏸️ **Awaiting BUILD approval**
+3. Upon "BUILD" command: Implementation will proceed in order:
+   - Phase 1: Foundation (Next.js, Tailwind, design tokens, layout)
+   - Phase 2: Core Components (Navbar, Hero, HowItWorks, Services)
+   - Phase 3: Supporting Sections (Outcomes, FAQ, CTASection, Footer)
+   - Phase 4: Interactivity (Modal form, submission, scroll-to-top)
+   - Phase 5: Polish (Animations, accessibility, dark mode refinement)
+   - Phase 6: Final Review (SEO, performance, browser testing)
 
 ---
 
-**Status:** ⏸️ Awaiting approval and missing information answers.
+**Status:** ✅ Planning Complete — Ready for BUILD
+
+**All requirements confirmed. Ready to implement on your approval.**
+
+Reply with: **"BUILD"**
