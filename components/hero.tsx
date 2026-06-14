@@ -14,7 +14,7 @@ export function Hero() {
 
           {/* Hero Headline */}
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-[color:var(--foreground)]">
-            Struggling with forms, appeals or letters?
+            Struggling with forms, appeals or letters you can&apos;t ignore?
           </h1>
 
           {/* Decorative line separator */}
@@ -25,7 +25,7 @@ export function Hero() {
 
           {/* Hero Subheadline */}
           <p className="text-xl md:text-2xl text-[color:var(--accent-primary)] font-semibold mb-6">
-            Get clear, practical support with important paperwork and document preparation.
+            Get clear, practical support with important paperwork before deadlines or decisions are made.
           </p>
 
           {/* Hero Description */}
@@ -46,6 +46,11 @@ export function Hero() {
           >
             Get Help With My Paperwork
           </button>
+
+          {/* Trust line */}
+          <p className="text-sm text-[color:var(--muted-foreground)] mt-4 mb-8">
+            Free initial review: send a short summary and we&apos;ll tell you whether it appears suitable for document support.
+          </p>
 
           {/* Help Panel */}
           <HelpPanel
