@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist } from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
+import { CustomCursor } from '@/components/custom-cursor'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-sans', subsets: ['latin'] })
@@ -55,6 +56,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <CustomCursor />
           {children}
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
