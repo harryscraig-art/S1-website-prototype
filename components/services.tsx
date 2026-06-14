@@ -72,14 +72,14 @@ export function Services() {
 
         {/* Help Panel */}
         <HelpPanel
-          closedLabel="What forms, appeals and correspondence can you help with?"
-          openCopy="We can help with forms, complaints, applications, appeal papers, evidence packs, council correspondence, benefits documents, school admissions, family court paperwork and many other types of important documents."
+          closedLabel="What paperwork, deadlines and decisions can you help with?"
+          openCopy="We can help with forms, complaints, applications, appeal papers, evidence packs, council correspondence, benefits documents, school admissions, family court paperwork and many other types of important documents and decisions."
         />
 
         {/* Additional Services Text */}
         <div className="text-center mt-16 animate-fade-in">
           <p className="text-[color:var(--muted-foreground)] text-lg">
-            And many other forms, complaints, applications, appeals and evidence packs.
+            From complaints and applications to evidence packs and formal correspondence—we help with the paperwork and decisions that matter.
           </p>
         </div>
       </div>

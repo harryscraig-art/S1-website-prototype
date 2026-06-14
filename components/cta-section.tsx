@@ -24,7 +24,7 @@ export function CTASection() {
         </p>
 
         <p className="text-base md:text-lg text-[color:var(--muted-foreground)] mb-10 leading-relaxed">
-          Tell us about your forms, appeals or correspondence challenge, and we&apos;ll help you create a clear action plan.
+          Tell us about your paperwork challenge, and we&apos;ll help you create a clear action plan.
         </p>
 
         <button
@@ -37,7 +37,7 @@ export function CTASection() {
           className="inline-flex items-center justify-center px-8 py-4 bg-[color:var(--accent-primary)] text-white hover:bg-[color:var(--accent-primary)]/90 active:bg-[color:var(--accent-primary)]/80 rounded-lg font-medium transition-all duration-300 text-lg gap-2 hover:shadow-lg hover:scale-105 animate-scale-in"
           style={{ animationDelay: '0.2s' }}
         >
-          Get Help With My Forms & Appeals
+          Get Help With My Paperwork
         </button>
 
         {/* Updated enquiry text with calm icon - clickable */}

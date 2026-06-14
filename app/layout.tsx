@@ -8,8 +8,8 @@ import './globals.css'
 const geistSans = Geist({ variable: '--font-sans', subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Supportology | Document Support & Forms Help',
-  description: 'Get clear, practical help with important forms, appeals and correspondence. Supportology helps you organise documents into clear, manageable action plans.',
+  title: 'Supportology | Document Support & Paperwork Help',
+  description: 'Get clear, practical help with important paperwork, deadlines and decisions. Supportology helps you organise documents into clear, manageable action plans.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'Supportology | Document Support & Forms Help',
-    description: 'Get clear, practical help with important forms, appeals and correspondence. Supportology helps you organise documents into clear, manageable action plans.',
+    title: 'Supportology | Document Support & Paperwork Help',
+    description: 'Get clear, practical help with important paperwork, deadlines and decisions. Supportology helps you organise documents into clear, manageable action plans.',
     url: 'https://supportology.co.uk',
     type: 'website',
   },

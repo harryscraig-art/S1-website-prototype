@@ -13,7 +13,7 @@ export function HowItWorks() {
     {
       number: '1',
       title: 'Tell us what\'s confusing you',
-      description: 'Send a short message about the forms, appeals, or correspondence you need help with.',
+      description: 'Send a short message about the paperwork, deadlines or decision you need help with.',
       icon: HelpCircle,
     },
     {
@@ -88,7 +88,7 @@ export function HowItWorks() {
         {/* Help Panel */}
         <HelpPanel
           closedLabel="What happens after I send a message?"
-          openCopy="You send a short enquiry describing your forms, appeals, correspondence or evidence challenge. We review it and explain whether document support is suitable. If it is, the next step is agreed by email."
+          openCopy="You send a short enquiry describing your paperwork, deadline or decision challenge. We review it and explain whether document support is suitable. If it is, the next step is agreed by email."
         />
       </div>
     </section>

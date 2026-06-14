@@ -14,7 +14,7 @@ export function Hero() {
 
           {/* Hero Headline */}
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6 text-[color:var(--foreground)]">
-            Struggling with forms and appeals?
+            Struggling with forms, appeals or letters?
           </h1>
 
           {/* Decorative line separator */}
@@ -25,12 +25,12 @@ export function Hero() {
 
           {/* Hero Subheadline */}
           <p className="text-xl md:text-2xl text-[color:var(--accent-primary)] font-semibold mb-6">
-            Get clear, practical help with important forms, appeals and correspondence.
+            Get clear, practical help with important paperwork, deadlines and decisions.
           </p>
 
           {/* Hero Description */}
           <p className="text-base md:text-lg text-[color:var(--foreground)] mb-12 leading-relaxed max-w-xl mx-auto">
-            Whether it&apos;s forms, correspondence, complaints, appeals or evidence—we help you organise it all into manageable action plans.
+            From complaints and applications to evidence packs and formal correspondence, we help organise what you have and turn it into clear next steps.
           </p>
 
           {/* Hero CTA Button */}
@@ -44,7 +44,7 @@ export function Hero() {
             className="inline-flex items-center justify-center px-8 py-4 bg-[color:var(--accent-primary)] text-white hover:bg-[color:var(--accent-primary)]/90 active:bg-[color:var(--accent-primary)]/80 rounded-lg font-medium transition-all duration-300 text-lg gap-2 hover:shadow-lg hover:scale-105 animate-scale-in"
             style={{ animationDelay: '0.2s' }}
           >
-            Get Help With My Forms & Appeals
+            Get Help With My Paperwork
           </button>
 
           {/* Help Panel */}
