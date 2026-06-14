@@ -30,12 +30,12 @@ export function FAQ() {
     {
       question: 'What happens after I submit my enquiry?',
       answer:
-        'We review what you send us and get back to you within 24 hours. We&apos;ll explain whether we can help with your paperwork, deadlines and decisions, and discuss next steps. There&apos;s no obligation at any point.',
+        'We review what you send us and get back to you within 24 hours. We&apos;ll explain whether document support is suitable for your situation and discuss next steps. There&apos;s no obligation at any point.',
     },
     {
-      question: 'Can you help with all types of paperwork, deadlines and decisions?',
+      question: 'Can you help with all types of paperwork?',
       answer:
-        'We help with a wide range of situations including forms, applications, correspondence, appeals, complaints, evidence packs, and decision-related paperwork. Contact us to discuss your specific needs.',
+        'We help with a wide range of situations including forms, applications, correspondence, appeals, complaints, and evidence packs. Contact us to discuss your specific needs.',
     },
   ]
 
