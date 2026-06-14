@@ -56,7 +56,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased bg-background text-foreground">
         <AnimatedBackground />
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" storageKey="supportology-theme">
           {children}
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
