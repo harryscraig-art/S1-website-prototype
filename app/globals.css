@@ -94,6 +94,41 @@
   }
 }
 
+/* High Contrast Mode */
+.high-contrast {
+  /* Light mode high contrast */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #f5f5f5;
+  --card-foreground: #000000;
+  --accent-primary: #0047ab;
+  --accent-light: #cce5ff;
+  --border: #000000;
+  --input: #f0f0f0;
+  --muted: #cccccc;
+  --muted-foreground: #333333;
+  --destructive: #cc0000;
+  --destructive-foreground: #ffffff;
+  --ring: #0047ab;
+}
+
+/* High Contrast Dark Mode */
+.dark.high-contrast {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --accent-primary: #ffff00;
+  --accent-light: #333300;
+  --border: #ffffff;
+  --input: #333333;
+  --muted: #666666;
+  --muted-foreground: #cccccc;
+  --destructive: #ff4444;
+  --destructive-foreground: #000000;
+  --ring: #ffff00;
+}
+
 /* Base Styles */
 @layer base {
   * {

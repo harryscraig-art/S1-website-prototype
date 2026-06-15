@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
+import { HighContrastToggle } from './high-contrast-toggle'
 import { LogoPlaceholder } from './logo'
 
 export function Navbar() {
@@ -46,9 +47,10 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Right Side: Theme Toggle + CTA */}
+        {/* Right Side: Theme Toggle + High Contrast + CTA */}
         <div className="flex items-center gap-3">
           <ThemeToggle />
+          <HighContrastToggle />
           <button
             onClick={() => {
               const modal = document.getElementById('enquiry-modal')
