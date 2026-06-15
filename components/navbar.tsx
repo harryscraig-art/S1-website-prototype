@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { ThemeToggle } from './theme-toggle'
-import { LogoPlaceholder } from './logo'
+import { LogoPlaceholder, LogoPlaceholderLight } from './logo'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,6 +29,7 @@ export function Navbar() {
         {/* Logo */}
         <div className="animate-slide-in-left">
           <LogoPlaceholder />
+          <LogoPlaceholderLight />
         </div>
 
         {/* Desktop Navigation */}
