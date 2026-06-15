@@ -12,11 +12,11 @@
 
   /* Background & Foreground */
   --background: #f8fafb;
-  --foreground: #0f1419;
+  --foreground: #001639;
 
   /* Cards & Surfaces */
   --card: #ffffff;
-  --card-foreground: #0f1419;
+  --card-foreground: #001639;
 
   /* Accents & Brand */
   --accent-primary: #0891b2;
@@ -94,6 +94,41 @@
   }
 }
 
+/* High Contrast Mode */
+.high-contrast {
+  /* Light mode high contrast */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #f5f5f5;
+  --card-foreground: #000000;
+  --accent-primary: #0047ab;
+  --accent-light: #cce5ff;
+  --border: #000000;
+  --input: #f0f0f0;
+  --muted: #cccccc;
+  --muted-foreground: #333333;
+  --destructive: #cc0000;
+  --destructive-foreground: #ffffff;
+  --ring: #0047ab;
+}
+
+/* High Contrast Dark Mode */
+.dark.high-contrast {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --accent-primary: #8800ff;
+  --accent-light: #440088;
+  --border: #ffffff;
+  --input: #333333;
+  --muted: #999999;
+  --muted-foreground: #ffffff;
+  --destructive: #ff0000;
+  --destructive-foreground: #000000;
+  --ring: #8800ff;
+}
+
 /* Base Styles */
 @layer base {
   * {
@@ -109,6 +144,14 @@
   }
 
   /* Typography Hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[color:var(--foreground)];
+  }
+
+  p, span, li {
+    @apply text-[color:var(--foreground)];
+  }
+
   h1 {
     @apply text-4xl md:text-5xl font-bold tracking-tight text-balance;
   }

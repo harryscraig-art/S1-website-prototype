@@ -7,25 +7,21 @@ import './globals.css'
 
 const geistSans = Geist({ variable: '--font-sans', subsets: ['latin'] })
 
+function FaviconSwitcher() {
+  return (
+    <>
+      <link rel="icon" href="/icon.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+      <link rel="icon" href="/icon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+    </>
+  )
+}
+
 export const metadata: Metadata = {
   title: 'Supportology | Document Support & Paperwork Help',
   description: 'Overwhelmed by paperwork? Supportology helps you organise forms, correspondence, complaints, appeals and evidence into clear, manageable action plans.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
+    icon: '/icon.svg',
     apple: '/apple-icon.png',
   },
   openGraph: {
@@ -54,6 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable}`} suppressHydrationWarning>
+      <head>
+        <FaviconSwitcher />
+      </head>
       <body className="font-sans antialiased bg-background text-foreground">
         <AnimatedBackground />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>

@@ -1,22 +1,28 @@
 'use client'
 
+import { ShieldCheck, ClipboardList, GraduationCap, Mail } from 'lucide-react'
+
 export function HowWeHaveHelped() {
   const examples = [
     {
       title: 'Non-Molestation Order Paperwork',
       description: 'Feeling overwhelmed after being unable to obtain legal aid and needing help preparing paperwork for an urgent non-molestation order application.',
+      icon: ShieldCheck,
     },
     {
       title: 'Benefits Mandatory Reconsideration',
       description: 'Needing help understanding a benefits decision, organising medical evidence and preparing clear paperwork for a mandatory reconsideration.',
+      icon: ClipboardList,
     },
     {
       title: 'School Admissions Appeal',
       description: 'Feeling confused by long emails, appeal papers, guidance documents and supporting evidence received from the council, and needing help organising everything into a clear and manageable bundle.',
+      icon: GraduationCap,
     },
     {
       title: 'Council Tax Arrears Correspondence',
       description: 'Receiving multiple letters, notices and council correspondence relating to council tax arrears and needing help understanding the paperwork, organising documents and preparing a clear response.',
+      icon: Mail,
     },
   ]
 
@@ -36,7 +42,9 @@ export function HowWeHaveHelped() {
 
         {/* Examples Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-8 animate-stagger">
-          {examples.map((example, index) => (
+          {examples.map((example, index) => {
+            const IconComponent = example.icon
+            return (
             <div
               key={index}
               className="group relative bg-[color:var(--background)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden"
@@ -51,9 +59,7 @@ export function HowWeHaveHelped() {
                 {/* Icon + Title */}
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-8 h-8 bg-[color:var(--accent-primary)]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[color:var(--accent-primary)]/40 transition-colors duration-300">
-                    <svg className="w-5 h-5 text-[color:var(--accent-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                    </svg>
+                    <IconComponent className="w-5 h-5 text-[color:var(--accent-primary)]" />
                   </div>
                   <h3 className="text-lg font-bold text-[color:var(--foreground)] group-hover:text-[color:var(--accent-primary)] transition-colors duration-300">
                     {example.title}
@@ -65,7 +71,8 @@ export function HowWeHaveHelped() {
                 </p>
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* Additional Services Text */}
