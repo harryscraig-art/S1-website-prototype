@@ -51,7 +51,7 @@ export function Services() {
                   {/* Icon or Image */}
                   <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
                     {service.isImage ? (
-                      <img src="/appeals-icon.svg" alt={service.title} className="w-8 h-8" />
+                      <img src="/appeals-icon.svg" alt={service.title} className="w-10 h-10" />
                     ) : (
                       (() => {
                         const Icon = service.icon
