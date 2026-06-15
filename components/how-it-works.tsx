@@ -1,6 +1,6 @@
 'use client'
 
-import { CheckCircle2 } from 'lucide-react'
+import { MessageCircle, FolderOpen, Compass } from 'lucide-react'
 import { HelpPanel } from './help-panel'
 
 export function HowItWorks() {
@@ -9,16 +9,19 @@ export function HowItWorks() {
       number: '1',
       title: 'Tell us what\'s confusing you',
       description: 'Send a short message about the paperwork, deadline or problem you are dealing with.',
+      icon: MessageCircle,
     },
     {
       number: '2',
       title: 'We organise the issue',
       description: 'We review the information, identify the key documents and help make sense of what needs doing.',
+      icon: FolderOpen,
     },
     {
       number: '3',
       title: 'You get clear next steps',
       description: 'You receive a clear summary of the next actions, priorities and paperwork needed to move forward.',
+      icon: Compass,
     },
   ]
 
@@ -62,7 +65,10 @@ export function HowItWorks() {
 
                 {/* Checkmark Icon - Teal */}
                 <div className="mt-6">
-                  <CheckCircle2 size={24} className="text-[color:var(--accent-primary)] group-hover:scale-125 transition-transform duration-300" />
+                  {(() => {
+                    const Icon = step.icon
+                    return <Icon size={24} className="text-[color:var(--accent-primary)] group-hover:scale-125 transition-transform duration-300" />
+                  })()}
                 </div>
 
                 {/* Bottom teal accent line */}
