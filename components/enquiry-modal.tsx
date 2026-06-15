@@ -130,8 +130,9 @@ export function EnquiryModal() {
                 >
                   <option value="">Select a type...</option>
                   <option value="forms">Forms & Applications</option>
-                  <option value="correspondence">Correspondence & Evidence</option>
+                  <option value="letters">Letters & Correspondence</option>
                   <option value="appeals">Appeals & Complaints</option>
+                  <option value="evidence">Evidence Packs</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -154,7 +155,7 @@ export function EnquiryModal() {
               {/* Message */}
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Brief Description
+                  What do you need help with?
                 </label>
                 <textarea
                   name="message"
@@ -163,7 +164,7 @@ export function EnquiryModal() {
                   required
                   rows={4}
                   className="w-full px-4 py-2 border border-[color:var(--border)] rounded-md bg-[color:var(--card)] dark:bg-[color:var(--background)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent-primary)] resize-none"
-                  placeholder="Tell us about your situation..."
+                  placeholder="Briefly explain the paperwork, letter, form or deadline you're dealing with."
                 />
               </div>
 
@@ -179,7 +180,7 @@ export function EnquiryModal() {
                   className="mt-1"
                 />
                 <label htmlFor="noLegalAdvice" className="text-xs text-[color:var(--muted-foreground)]">
-                  I confirm I understand Supportology provides document support, not regulated legal advice.
+                  I understand Supportology provides document support and preparation assistance, not regulated legal advice.
                 </label>
               </div>
 
