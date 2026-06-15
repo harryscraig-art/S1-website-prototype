@@ -118,15 +118,15 @@
   --foreground: #ffffff;
   --card: #1a1a1a;
   --card-foreground: #ffffff;
-  --accent-primary: #ffff00;
-  --accent-light: #333300;
+  --accent-primary: #00ff00;
+  --accent-light: #003300;
   --border: #ffffff;
   --input: #333333;
-  --muted: #666666;
-  --muted-foreground: #cccccc;
-  --destructive: #ff4444;
+  --muted: #999999;
+  --muted-foreground: #ffffff;
+  --destructive: #ff0000;
   --destructive-foreground: #000000;
-  --ring: #ffff00;
+  --ring: #00ff00;
 }
 
 /* Base Styles */
