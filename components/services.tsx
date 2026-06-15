@@ -1,6 +1,6 @@
 'use client'
 
-import { FileText, Mail, AlertCircle } from 'lucide-react'
+import { FileText, Mail } from 'lucide-react'
 import { HelpPanel } from './help-panel'
 
 export function Services() {
@@ -16,7 +16,7 @@ export function Services() {
       description: 'Sort through letters, emails, documents and evidence to build a clear, organised, compelling case.',
     },
     {
-      icon: AlertCircle,
+      isImage: true,
       title: 'Appeals & Complaints',
       description: 'Support preparing appeals, complaints, and formal responses with organised evidence and clear explanations.',
     },
@@ -39,7 +39,6 @@ export function Services() {
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12 animate-stagger">
           {services.map((service, index) => {
-            const Icon = service.icon
             return (
               <div
                 key={index}
@@ -49,9 +48,16 @@ export function Services() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--accent-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 <div className="relative z-10">
-                  {/* Icon */}
+                  {/* Icon or Image */}
                   <div className="w-14 h-14 bg-[color:var(--accent-light)] dark:bg-[color:var(--accent-primary)]/30 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:shadow-md transition-all duration-300">
-                    <Icon size={28} className="text-[color:var(--accent-primary)]" />
+                    {service.isImage ? (
+                      <img src="/favicon-32x32.png" alt={service.title} className="w-8 h-8" />
+                    ) : (
+                      (() => {
+                        const Icon = service.icon
+                        return <Icon size={28} className="text-[color:var(--accent-primary)]" />
+                      })()
+                    )}
                   </div>
 
                   {/* Title */}
