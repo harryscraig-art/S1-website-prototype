@@ -19,7 +19,7 @@ export function Footer() {
   const legal = [
     { label: 'Privacy Policy', href: '/privacy-policy' },
     { label: 'Terms & Conditions', href: '/terms-and-conditions' },
-    { label: 'Complaints Procedure', href: '#' },
+    { label: 'Complaints Procedure', href: '/complaints-procedure' },
   ]
 
   const handleNavClick = (href: string) => {
