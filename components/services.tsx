@@ -12,7 +12,7 @@ export function Services() {
     {
       icon: FileText,
       title: 'Forms & Applications',
-      description: 'Help understanding, completing, and organising forms, applications, and paperwork for any purpose.',
+      description: 'Help preparing, completing and organising forms, applications and supporting paperwork.',
     },
     {
       icon: Mail,
