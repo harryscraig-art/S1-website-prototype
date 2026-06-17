@@ -50,7 +50,7 @@ export function Hero() {
           {/* Help Panel */}
           <HelpPanel
             closedLabel="What kind of help can I get?"
-            openCopy="Supportology helps you make sense of important paperwork, organise documents, prepare clear written responses and understand what needs doing next. We provide document support and preparation assistance, not regulated legal advice."
+            openCopy="Supportology helps you organise important paperwork, navigate complicated processes and prepare clear written documents, including letters, complaints, appeals, forms, statements and evidence packs. We provide document support and preparation assistance, not regulated legal advice."
           />
         </div>
       </div>
