@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { X, CheckCircle2 } from 'lucide-react'
 
 export function EnquiryModal() {
@@ -28,7 +28,7 @@ export function EnquiryModal() {
   }
 
   // Expose openModal via window for external access
-  React.useEffect(() => {
+  useEffect(() => {
     ;(window as any).openEnquiryModal = openModal
   }, [])
 
