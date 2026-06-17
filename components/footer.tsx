@@ -35,6 +35,7 @@ export function Footer() {
     if (isHomepage) {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
+      // Navigate to homepage
       window.location.href = '/'
     }
   }
