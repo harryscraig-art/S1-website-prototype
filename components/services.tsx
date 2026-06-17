@@ -1,6 +1,6 @@
 'use client'
 
-import { FileText, Mail, Scale } from 'lucide-react'
+import { FileText, Mail, MessageSquareWarning } from 'lucide-react'
 import { HelpPanel } from './help-panel'
 
 export function Services() {
@@ -16,7 +16,7 @@ export function Services() {
       description: 'Sort through letters, emails, documents and evidence to build a clear, organised, compelling case.',
     },
     {
-      icon: Scale,
+      icon: MessageSquareWarning,
       title: 'Appeals & Complaints',
       description: 'Support preparing appeals, complaints, and formal responses with organised evidence and clear explanations.',
     },
