@@ -78,7 +78,11 @@ export function Services() {
         {/* Help Panel */}
         <HelpPanel
           closedLabel="What paperwork can you help with?"
-          openCopy="We can help with many types of important paperwork, including forms, applications, formal letters, complaints, appeals, written responses, evidence packs and document bundles. This can include council correspondence, benefits paperwork, school admissions appeals, housing documents, SAR or FOI requests, family court preparation documents, witness statements, position statements, chronologies and urgent paperwork that needs to be organised quickly. We help make the paperwork clearer, better organised and easier to respond to."
+          openCopy="We help with important paperwork such as forms, applications, complaints, appeals, formal letters, written responses and evidence packs.
+
+This can include council, benefits, housing, school admissions and family court preparation paperwork.
+
+We help organise the documents, prepare clear written responses and make the next steps easier to understand."
         />
 
         {/* Additional Services Text */}
