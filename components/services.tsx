@@ -4,6 +4,10 @@ import { FileText, Mail, MessageSquareWarning } from 'lucide-react'
 import { HelpPanel } from './help-panel'
 
 export function Services() {
+  const handleCardClick = (serviceTitle: string) => {
+    ;(window as any).openEnquiryModal?.(serviceTitle)
+  }
+
   const services = [
     {
       icon: FileText,
@@ -43,7 +47,8 @@ export function Services() {
             return (
               <div
                 key={index}
-                className="group relative bg-[color:var(--card)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden"
+                onClick={() => handleCardClick(service.title)}
+                className="group relative bg-[color:var(--card)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
               >
                 {/* Teal accent background on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--accent-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
