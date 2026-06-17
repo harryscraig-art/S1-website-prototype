@@ -31,6 +31,10 @@ export function Footer() {
     }
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <footer className="bg-[color:var(--card)] border-t-2 border-[color:var(--accent-primary)] py-12 md:py-16 relative overflow-hidden">
       {/* Decorative teal element */}
@@ -41,9 +45,9 @@ export function Footer() {
           {/* Brand Section */}
           <div className="animate-slide-in-left">
             <div className="mb-4">
-              <Link href="/">
+              <button onClick={scrollToTop} className="cursor-pointer">
                 <LogoPlaceholder />
-              </Link>
+              </button>
             </div>
             <p className="text-sm text-[color:var(--muted-foreground)] leading-relaxed">
               Turning paperwork problems into clear, prepared documents.
