@@ -28,7 +28,7 @@ export function Navbar() {
     }
   }
 
-  const scrollToTop = () => {
+  const handleLogoClick = () => {
     if (isHomepage) {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
@@ -41,7 +41,7 @@ export function Navbar() {
       <div className="container-custom flex items-center justify-between h-16">
         {/* Logo */}
         <div className="animate-slide-in-left">
-          <button onClick={scrollToTop} className="cursor-pointer">
+          <button onClick={handleLogoClick} className="cursor-pointer">
             <LogoPlaceholder />
           </button>
         </div>

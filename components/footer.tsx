@@ -31,7 +31,7 @@ export function Footer() {
     }
   }
 
-  const scrollToTop = () => {
+  const handleLogoClick = () => {
     if (isHomepage) {
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
@@ -49,7 +49,7 @@ export function Footer() {
           {/* Brand Section */}
           <div className="animate-slide-in-left">
             <div className="mb-4">
-              <button onClick={scrollToTop} className="cursor-pointer">
+              <button onClick={handleLogoClick} className="cursor-pointer">
                 <LogoPlaceholder />
               </button>
             </div>
