@@ -109,13 +109,16 @@ export default function TermsAndConditions() {
                 <div>
                   <h2 className="text-2xl font-bold mb-3 text-[color:var(--foreground)]">6. Cancellations and Refunds</h2>
                   <p className="text-base leading-relaxed">
-                    If you cancel before work has started, we may provide a refund.
+                    If you cancel before work has started, we will provide a refund.
                   </p>
                   <p className="text-base leading-relaxed">
-                    If work has already started or been completed, fees may not be refundable.
+                    Once work has started, fees may not be refundable.
                   </p>
                   <p className="text-base leading-relaxed">
-                    Where appropriate, we may offer a partial refund based on the work already carried out.
+                    If only part of the work has been completed, we may offer a partial refund based on the work already carried out.
+                  </p>
+                  <p className="text-base leading-relaxed">
+                    Because our service involves reviewing paperwork and preparing documents, you agree that work may begin once payment has been made and the scope of work has been confirmed.
                   </p>
                 </div>
 
