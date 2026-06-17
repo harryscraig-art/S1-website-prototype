@@ -25,7 +25,7 @@ export function Hero() {
 
           {/* Hero Subheadline */}
           <p className="text-xl md:text-2xl text-[color:var(--accent-primary)] font-semibold mb-6">
-            Turning paperwork problems into clear next steps.
+            Turning paperwork problems into clear, prepared documents.
           </p>
 
           {/* Hero Description */}
