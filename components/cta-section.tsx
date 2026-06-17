@@ -16,7 +16,7 @@ export function CTASection() {
         {/* Decorative line accent */}
         <div className="flex items-center justify-center gap-4 mb-8">
           <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
-          <div className="w-8 h-1 bg-[color:var(--accent-primary)]/40 rounded-full" />
+          <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
         </div>
 
         <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-3">
@@ -24,7 +24,7 @@ export function CTASection() {
         </p>
 
         <p className="text-base md:text-lg text-[color:var(--muted-foreground)] mb-10 leading-relaxed">
-          Tell us about your paperwork challenge, and we&apos;ll help you create a clear action plan.
+          Tell us about your paperwork difficulty, and we&apos;ll help organise the issue, prepare clear documents and explain the next steps.
         </p>
 
         <button
@@ -55,7 +55,7 @@ export function CTASection() {
             <ClipboardCheck size={18} className="text-[color:var(--accent-primary)] flex-shrink-0 group-hover:scale-110 transition-transform" />
             <span className="font-medium text-[color:var(--foreground)] group-hover:text-[color:var(--accent-primary)] transition-colors">Not sure where to start?</span>
           </div>
-          <p>Send a short message and we&apos;ll take it from there.</p>
+          <p>Send a short message about the paperwork you are dealing with, and we&apos;ll let you know whether we can help.</p>
         </button>
       </div>
     </section>

@@ -1,22 +1,44 @@
 'use client'
 
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { LogoPlaceholder } from './logo'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const pathname = usePathname()
+  const isHomepage = pathname === '/'
 
   const links = [
-    { label: 'Home', href: '#' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Services', href: '#services' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Home', href: '/' },
+    { label: 'How It Works', href: '/#how-it-works' },
+    { label: 'Services', href: '/#services' },
+    { label: 'FAQ', href: '/#faq' },
   ]
 
   const legal = [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Complaints Procedure', href: '#' },
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms & Conditions', href: '/terms-and-conditions' },
+    { label: 'Complaints Procedure', href: '/complaints-procedure' },
   ]
+
+  const handleNavClick = (href: string) => {
+    if (isHomepage && href.startsWith('/#')) {
+      const element = document.querySelector(href.substring(1))
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
+
+  const handleLogoClick = () => {
+    if (isHomepage) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      // Navigate to homepage
+      window.location.href = '/'
+    }
+  }
 
   return (
     <footer className="bg-[color:var(--card)] border-t-2 border-[color:var(--accent-primary)] py-12 md:py-16 relative overflow-hidden">
@@ -28,10 +50,12 @@ export function Footer() {
           {/* Brand Section */}
           <div className="animate-slide-in-left">
             <div className="mb-4">
-              <LogoPlaceholder />
+              <button onClick={handleLogoClick} className="cursor-pointer">
+                <LogoPlaceholder />
+              </button>
             </div>
             <p className="text-sm text-[color:var(--muted-foreground)] leading-relaxed">
-              Turning paperwork problems into clear next steps.
+              Turning paperwork problems into clear, prepared documents.
             </p>
           </div>
 
@@ -41,12 +65,21 @@ export function Footer() {
             <ul className="space-y-3">
               {links.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-[color:var(--muted-foreground)] hover:text-[color:var(--accent-primary)] hover:pl-2 transition-all duration-300"
-                  >
-                    {link.label}
-                  </a>
+                  {link.href.startsWith('/#') && isHomepage ? (
+                    <button
+                      onClick={() => handleNavClick(link.href)}
+                      className="text-left text-sm text-[color:var(--muted-foreground)] hover:text-[color:var(--accent-primary)] hover:pl-2 transition-all duration-300"
+                    >
+                      {link.label}
+                    </button>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-[color:var(--muted-foreground)] hover:text-[color:var(--accent-primary)] hover:pl-2 transition-all duration-300 block"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -58,12 +91,12 @@ export function Footer() {
             <ul className="space-y-3">
               {legal.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-[color:var(--muted-foreground)] hover:text-[color:var(--accent-primary)] hover:pl-2 transition-all duration-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -92,13 +125,13 @@ export function Footer() {
             </p>
             <div className="flex gap-6 mt-4 md:mt-0">
               {legal.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   className="text-xs text-[color:var(--muted-foreground)] hover:text-[color:var(--accent-primary)] transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

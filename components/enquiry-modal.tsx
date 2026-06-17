@@ -1,11 +1,12 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { X, CheckCircle2 } from 'lucide-react'
 
 export function EnquiryModal() {
   const modalRef = useRef<HTMLDialogElement>(null)
   const [submitted, setSubmitted] = useState(false)
+  const [selectedCase, setSelectedCase] = useState<string>('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,6 +15,22 @@ export function EnquiryModal() {
     message: '',
     noLegalAdvice: false,
   })
+
+  const openModal = (caseTitle?: string) => {
+    if (caseTitle) {
+      setSelectedCase(caseTitle)
+      setFormData(prev => ({
+        ...prev,
+        message: `I'm interested in getting help with: ${caseTitle}`
+      }))
+    }
+    modalRef.current?.showModal()
+  }
+
+  // Expose openModal via window for external access
+  useEffect(() => {
+    ;(window as any).openEnquiryModal = openModal
+  }, [])
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -47,6 +64,7 @@ export function EnquiryModal() {
     if (modalRef.current) {
       modalRef.current.close()
       setSubmitted(false)
+      setSelectedCase('')
       setFormData({
         name: '',
         email: '',
@@ -79,7 +97,7 @@ export function EnquiryModal() {
             {/* Modal Header */}
             <h2 className="text-2xl font-bold mb-2">Tell Us About Your Paperwork</h2>
             <p className="text-[color:var(--muted-foreground)] mb-6">
-              We&apos;ll review your enquiry and get back to you within 24 hours.
+              Send a few details and we&apos;ll let you know whether we can help.
             </p>
 
             {/* Form */}
@@ -96,7 +114,7 @@ export function EnquiryModal() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-[color:var(--border)] rounded-md bg-[color:var(--card)] dark:bg-[color:var(--background)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--accent-primary)]"
-                  placeholder="Your name"
+                  placeholder="Full name"
                 />
               </div>
 
@@ -140,7 +158,7 @@ export function EnquiryModal() {
               {/* Deadline */}
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Deadline (if urgent)
+                  Deadline, if urgent
                 </label>
                 <input
                   type="text"

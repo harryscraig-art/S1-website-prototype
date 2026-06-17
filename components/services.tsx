@@ -1,14 +1,18 @@
 'use client'
 
-import { FileText, Mail, Scale } from 'lucide-react'
+import { FileText, Mail, MessageSquareWarning } from 'lucide-react'
 import { HelpPanel } from './help-panel'
 
 export function Services() {
+  const handleCardClick = (serviceTitle: string) => {
+    ;(window as any).openEnquiryModal?.(serviceTitle)
+  }
+
   const services = [
     {
       icon: FileText,
       title: 'Forms & Applications',
-      description: 'Help understanding, completing, and organising forms, applications, and paperwork for any purpose.',
+      description: 'Help preparing, completing and organising forms, applications and supporting paperwork.',
     },
     {
       icon: Mail,
@@ -16,7 +20,7 @@ export function Services() {
       description: 'Sort through letters, emails, documents and evidence to build a clear, organised, compelling case.',
     },
     {
-      icon: Scale,
+      icon: MessageSquareWarning,
       title: 'Appeals & Complaints',
       description: 'Support preparing appeals, complaints, and formal responses with organised evidence and clear explanations.',
     },
@@ -43,7 +47,8 @@ export function Services() {
             return (
               <div
                 key={index}
-                className="group relative bg-[color:var(--card)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden"
+                onClick={() => handleCardClick(service.title)}
+                className="group relative bg-[color:var(--card)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
               >
                 {/* Teal accent background on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--accent-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -73,13 +78,17 @@ export function Services() {
         {/* Help Panel */}
         <HelpPanel
           closedLabel="What paperwork can you help with?"
-          openCopy="We can help with forms, complaints, applications, appeal papers, evidence packs, council correspondence, benefits paperwork, school admissions paperwork and family court preparation documents."
+          openCopy="We help with important paperwork such as forms, applications, complaints, appeals, formal letters, written responses and evidence packs.
+
+This can include council, benefits, housing, school admissions and family court preparation paperwork.
+
+We help organise the documents, prepare clear written responses and make the next steps easier to understand."
         />
 
         {/* Additional Services Text */}
         <div className="text-center mt-16 animate-fade-in">
           <p className="text-[color:var(--muted-foreground)] text-lg">
-            And many other forms, complaints, applications, appeals and evidence packs.
+            Not sure if we can help? Send us a message and we&apos;ll let you know.
           </p>
         </div>
       </div>

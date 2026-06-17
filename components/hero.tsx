@@ -25,12 +25,12 @@ export function Hero() {
 
           {/* Hero Subheadline */}
           <p className="text-xl md:text-2xl text-[color:var(--accent-primary)] font-semibold mb-6">
-            Turning paperwork problems into clear next steps.
+            Turning paperwork problems into clear, prepared documents.
           </p>
 
           {/* Hero Description */}
           <p className="text-base md:text-lg text-[color:var(--foreground)] mb-12 leading-relaxed max-w-xl mx-auto">
-            Whether it&apos;s forms, correspondence, complaints, appeals or evidence—we help you organise it all into manageable action plans.
+            Whether it&apos;s forms, correspondence, complaints, appeals or evidence, we help organise paperwork, navigate complicated processes and prepare clear documents.
           </p>
 
           {/* Hero CTA Button */}
@@ -50,7 +50,7 @@ export function Hero() {
           {/* Help Panel */}
           <HelpPanel
             closedLabel="What kind of help can I get?"
-            openCopy="Supportology helps you make sense of important paperwork, organise documents, prepare clear written responses and understand what needs doing next. We provide document support and preparation assistance, not regulated legal advice."
+            openCopy="Supportology helps you organise important paperwork, navigate complicated processes and prepare clear written documents, including letters, complaints, appeals, forms, statements and evidence packs. We provide document support and preparation assistance, not regulated legal advice."
           />
         </div>
       </div>

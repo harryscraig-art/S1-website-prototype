@@ -1,24 +1,27 @@
 'use client'
 
-import { CheckCircle2 } from 'lucide-react'
+import { MessageCircle, Layers, Compass } from 'lucide-react'
 import { HelpPanel } from './help-panel'
 
 export function HowItWorks() {
   const steps = [
     {
       number: '1',
-      title: 'Tell us what\'s confusing you',
+      title: 'Tell us what you need help with',
       description: 'Send a short message about the paperwork, deadline or problem you are dealing with.',
+      icon: MessageCircle,
     },
     {
       number: '2',
       title: 'We organise the issue',
-      description: 'We review the information, identify the key documents and help make sense of what needs doing.',
+      description: 'We review the information, identify the key documents and make sense of what needs doing.',
+      icon: Layers,
     },
     {
       number: '3',
-      title: 'You get clear next steps',
-      description: 'You receive a clear summary of the next actions, priorities and paperwork needed to move forward.',
+      title: 'You receive clear paperwork and next steps',
+      description: 'You receive the prepared document, summary, priorities and next steps needed to move forward.',
+      icon: Compass,
     },
   ]
 
@@ -60,9 +63,9 @@ export function HowItWorks() {
                   {step.description}
                 </p>
 
-                {/* Checkmark Icon - Teal */}
+                {/* Icon - Message, Layers, Compass */}
                 <div className="mt-6">
-                  <CheckCircle2 size={24} className="text-[color:var(--accent-primary)] group-hover:scale-125 transition-transform duration-300" />
+                  {step.icon && <step.icon size={24} className="text-[color:var(--accent-primary)] group-hover:scale-125 transition-transform duration-300" />}
                 </div>
 
                 {/* Bottom teal accent line */}
@@ -75,7 +78,7 @@ export function HowItWorks() {
         {/* Help Panel */}
         <HelpPanel
           closedLabel="What happens after I send a message?"
-          openCopy="You send a short enquiry, we look at the type of paperwork involved, and we explain whether it is suitable for document support. If it is, the next step is agreed by email."
+          openCopy="You send a short enquiry, we review the type of paperwork involved and confirm whether it is suitable for document support. If it is, we agree the next step, price and timescale by email."
         />
       </div>
     </section>

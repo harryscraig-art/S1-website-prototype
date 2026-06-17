@@ -3,6 +3,10 @@
 import { ShieldCheck, ClipboardList, GraduationCap, Mail } from 'lucide-react'
 
 export function HowWeHaveHelped() {
+  const handleCardClick = (caseTitle: string) => {
+    ;(window as any).openEnquiryModal?.(caseTitle)
+  }
+
   const examples = [
     {
       title: 'Non-Molestation Order Paperwork',
@@ -16,7 +20,7 @@ export function HowWeHaveHelped() {
     },
     {
       title: 'School Admissions Appeal',
-      description: 'Feeling confused by long emails, appeal papers, guidance documents and supporting evidence received from the council, and needing help organising everything into a clear and manageable bundle.',
+      description: 'Feeling confused by long emails, appeal papers, guidance documents and supporting evidence received from the council, and needing help organising everything into a clear and manageable appeal bundle.',
       icon: GraduationCap,
     },
     {
@@ -36,7 +40,7 @@ export function HowWeHaveHelped() {
           </div>
           <h2 className="text-[color:var(--foreground)]">How We Have Helped</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
-            Real examples of the types of support we provide
+            Real examples of the types of support we have provided
           </p>
         </div>
 
@@ -47,7 +51,8 @@ export function HowWeHaveHelped() {
             return (
             <div
               key={index}
-              className="group relative bg-[color:var(--background)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden"
+              onClick={() => handleCardClick(example.title)}
+              className="group relative bg-[color:var(--background)] rounded-lg p-8 border-2 border-[color:var(--border)] hover:border-[color:var(--accent-primary)] hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
             >
               {/* Teal accent background on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--accent-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -78,7 +83,7 @@ export function HowWeHaveHelped() {
         {/* Additional Services Text */}
         <div className="text-center animate-fade-in">
           <p className="text-[color:var(--muted-foreground)] text-lg">
-            And many other forms, complaints, applications, appeals and evidence packs.
+            And many other forms, complaints, applications, appeals, written responses and evidence packs.
           </p>
         </div>
       </div>
