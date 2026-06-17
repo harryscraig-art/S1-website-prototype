@@ -28,14 +28,18 @@ export function Navbar() {
     }
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-slate-950/60 border-b border-[color:var(--accent-primary)]/20 shadow-sm">
       <div className="container-custom flex items-center justify-between h-16">
         {/* Logo */}
         <div className="animate-slide-in-left">
-          <Link href="/">
+          <button onClick={scrollToTop} className="cursor-pointer">
             <LogoPlaceholder />
-          </Link>
+          </button>
         </div>
 
         {/* Desktop Navigation */}
