@@ -39,8 +39,27 @@ export function FAQ() {
     },
   ]
 
+  // FAQ Schema for SEO
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
   return (
-    <section id="faq" className="section relative border-t border-[color:var(--border)]/30 overflow-hidden">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section id="faq" className="section relative border-t border-[color:var(--border)]/30 overflow-hidden">
       <div className="container-custom max-w-2xl relative z-10">
         <div className="text-center mb-12 animate-slide-up">
           {/* Teal accent line */}
@@ -87,5 +106,6 @@ export function FAQ() {
         </div>
       </div>
     </section>
+    </>
   )
 }

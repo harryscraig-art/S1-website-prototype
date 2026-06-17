@@ -1,9 +1,16 @@
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Privacy Policy | Supportology',
-  description: 'Supportology Privacy Policy - How we handle and protect your personal information.',
+  description: 'Learn how Supportology protects your privacy and handles your personal information when you use our document support services.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://supportology.co.uk/privacy-policy',
+  },
 }
 
 export default function PrivacyPolicyPage() {

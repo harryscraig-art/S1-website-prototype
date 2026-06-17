@@ -2,9 +2,16 @@ import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { EnquiryModal } from '@/components/enquiry-modal'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Terms & Conditions | Supportology',
-  description: 'Terms & Conditions for Supportology document support and preparation assistance.',
+  description: 'Read our Terms & Conditions for document support and preparation assistance services provided by Supportology.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://supportology.co.uk/terms-and-conditions',
+  },
 }
 
 export default function TermsAndConditions() {
