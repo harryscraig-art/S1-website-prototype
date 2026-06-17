@@ -36,7 +36,7 @@ export function HowWeHaveHelped() {
           </div>
           <h2 className="text-[color:var(--foreground)]">How We Have Helped</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
-            Real examples of the types of support we provide
+            Real examples of the types of support we have provided
           </p>
         </div>
 
