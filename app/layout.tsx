@@ -59,11 +59,20 @@ export const metadata: Metadata = {
     url: 'https://supportology.co.uk',
     type: 'website',
     locale: 'en_GB',
+    images: [
+      {
+        url: 'https://supportology.co.uk/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Supportology - Document Support & Paperwork Help',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Supportology | Document Support & Paperwork Help',
     description: 'Overwhelmed by paperwork? Supportology helps you organise forms, correspondence, complaints, appeals and evidence into clear, prepared documents.',
+    image: 'https://supportology.co.uk/og-image.svg',
   },
   alternates: {
     canonical: 'https://supportology.co.uk',
