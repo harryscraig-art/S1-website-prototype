@@ -10,32 +10,32 @@ export function FAQ() {
     {
       question: 'Is this legal advice?',
       answer:
-        'No. Supportology provides document support and preparation assistance. We do not provide regulated legal advice. If you need specific legal guidance, you should speak to a qualified solicitor or seek legal aid.',
+        'No. Supportology provides document support and preparation assistance. We do not provide regulated legal advice.',
     },
     {
       question: 'How much does it cost?',
       answer:
-        'Our fees vary depending on the complexity and volume of your paperwork. Contact us for a no-obligation quote based on your specific situation.',
-    },
-    {
-      question: 'How is my information kept confidential?',
-      answer:
-        'Your privacy is important to us. All information shared is kept strictly confidential and secure. We follow data protection regulations and never share your details with third parties without your consent.',
+        'The price depends on the type of paperwork, the amount of documents involved and how quickly you need help. Once we understand what you need, we will confirm the price and timescale before any work begins.',
     },
     {
       question: 'What if I have an urgent deadline?',
       answer:
-        'Let us know your deadline when you contact us. We can often accommodate urgent timescales. Get in touch to discuss your specific situation.',
+        'Tell us the deadline when you send your enquiry. Urgent paperwork is easier to deal with when we can see it early, so it is better to contact us as soon as possible rather than waiting until the last minute.',
     },
     {
       question: 'What happens after I submit my enquiry?',
       answer:
-        'We review what you send us and get back to you within 24 hours. We&apos;ll explain whether we can help with your paperwork and discuss next steps. There&apos;s no obligation at any point.',
+        'We review your enquiry and confirm whether it is suitable for document support. If it is, we will explain the next step, price and timescale by email.',
+    },
+    {
+      question: 'How is my information kept confidential?',
+      answer:
+        'Your information is treated confidentially and used only to review your enquiry and provide the support you ask for. We do not share your details with third parties without your consent.',
     },
     {
       question: 'Can you help with all types of paperwork?',
       answer:
-        'We help with a wide range of situations including forms, correspondence, appeals, complaints, and evidence packs. Contact us to discuss your specific needs.',
+        'We help with many types of important paperwork, including forms, applications, complaints, appeals, letters, written responses and evidence packs. If you are unsure whether we can help, send an enquiry and we will let you know.',
     },
   ]
 
@@ -49,7 +49,7 @@ export function FAQ() {
           </div>
           <h2 className="text-[color:var(--foreground)]">Frequently Asked Questions</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
-            Common questions about our support
+            Common questions before sending an enquiry
           </p>
         </div>
 
