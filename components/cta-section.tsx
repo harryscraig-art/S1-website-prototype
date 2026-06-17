@@ -24,7 +24,7 @@ export function CTASection() {
         </p>
 
         <p className="text-base md:text-lg text-[color:var(--muted-foreground)] mb-10 leading-relaxed">
-          Tell us about your paperwork challenge, and we&apos;ll help you create a clear action plan.
+          Tell us about your paperwork difficulty, and we&apos;ll help organise the issue, prepare clear documents and explain the next steps.
         </p>
 
         <button
