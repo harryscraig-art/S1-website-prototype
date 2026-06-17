@@ -20,7 +20,7 @@ export function HowWeHaveHelped() {
     },
     {
       title: 'School Admissions Appeal',
-      description: 'Feeling confused by long emails, appeal papers, guidance documents and supporting evidence received from the council, and needing help organising everything into a clear and manageable bundle.',
+      description: 'Feeling confused by long emails, appeal papers, guidance documents and supporting evidence received from the council, and needing help organising everything into a clear and manageable appeal bundle.',
       icon: GraduationCap,
     },
     {
