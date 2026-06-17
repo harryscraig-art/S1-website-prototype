@@ -6,6 +6,7 @@ import { X, CheckCircle2 } from 'lucide-react'
 export function EnquiryModal() {
   const modalRef = useRef<HTMLDialogElement>(null)
   const [submitted, setSubmitted] = useState(false)
+  const [selectedCase, setSelectedCase] = useState<string>('')
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,6 +15,22 @@ export function EnquiryModal() {
     message: '',
     noLegalAdvice: false,
   })
+
+  const openModal = (caseTitle?: string) => {
+    if (caseTitle) {
+      setSelectedCase(caseTitle)
+      setFormData(prev => ({
+        ...prev,
+        message: `I'm interested in getting help with: ${caseTitle}`
+      }))
+    }
+    modalRef.current?.showModal()
+  }
+
+  // Expose openModal via window for external access
+  React.useEffect(() => {
+    ;(window as any).openEnquiryModal = openModal
+  }, [])
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -47,6 +64,7 @@ export function EnquiryModal() {
     if (modalRef.current) {
       modalRef.current.close()
       setSubmitted(false)
+      setSelectedCase('')
       setFormData({
         name: '',
         email: '',
