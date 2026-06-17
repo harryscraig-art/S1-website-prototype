@@ -61,10 +61,11 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     images: [
       {
-        url: 'https://supportology.co.uk/og-image.svg',
+        url: 'https://og-placeholder.vercel.app/api/og?title=Supportology&description=Document%20Support%20%26%20Paperwork%20Help',
         width: 1200,
         height: 630,
         alt: 'Supportology - Document Support & Paperwork Help',
+        type: 'image/png',
       },
     ],
   },
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Supportology | Document Support & Paperwork Help',
     description: 'Overwhelmed by paperwork? Supportology helps you organise forms, correspondence, complaints, appeals and evidence into clear, prepared documents.',
-    image: 'https://supportology.co.uk/og-image.svg',
+    image: 'https://og-placeholder.vercel.app/api/og?title=Supportology&description=Document%20Support%20%26%20Paperwork%20Help',
   },
   alternates: {
     canonical: 'https://supportology.co.uk',
