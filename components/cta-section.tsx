@@ -16,7 +16,7 @@ export function CTASection() {
         {/* Decorative line accent */}
         <div className="flex items-center justify-center gap-4 mb-8">
           <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
-          <div className="w-8 h-1 bg-[color:var(--accent-primary)]/40 rounded-full" />
+          <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
         </div>
 
         <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-3">
