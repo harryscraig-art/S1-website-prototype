@@ -30,7 +30,7 @@ export function Hero() {
 
           {/* Hero Description */}
           <p className="text-base md:text-lg text-[color:var(--foreground)] mb-12 leading-relaxed max-w-xl mx-auto">
-            Whether it&apos;s forms, correspondence, complaints, appeals or evidence—we help you organise it all into manageable action plans.
+            Whether it&apos;s forms, correspondence, complaints, appeals or evidence, we help organise paperwork, navigate complicated processes and prepare clear documents.
           </p>
 
           {/* Hero CTA Button */}
