@@ -55,7 +55,7 @@ export function CTASection() {
             <ClipboardCheck size={18} className="text-[color:var(--accent-primary)] flex-shrink-0 group-hover:scale-110 transition-transform" />
             <span className="font-medium text-[color:var(--foreground)] group-hover:text-[color:var(--accent-primary)] transition-colors">Not sure where to start?</span>
           </div>
-          <p>Send a short message about the paperwork you are dealing with, and we&apos;ll let you know whether we can help.</p>
+          <p>Send a short message and we&apos;ll take it from there.</p>
         </button>
       </div>
     </section>
