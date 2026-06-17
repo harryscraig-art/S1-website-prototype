@@ -1,9 +1,16 @@
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Complaints Procedure | Supportology',
-  description: 'How to make a complaint about our service and our complaints procedure.',
+  description: 'Our complaints procedure and how to get in touch if you\'re unhappy with our document support service.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://supportology.co.uk/complaints-procedure',
+  },
 }
 
 export default function ComplaintsProcedurePage() {
