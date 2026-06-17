@@ -16,9 +16,38 @@ function FaviconSwitcher() {
   )
 }
 
+function JsonLdSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Supportology',
+    url: 'https://supportology.co.uk',
+    description: 'Document support and preparation assistance for paperwork, forms, complaints, appeals and evidence packs.',
+    email: 'help@supportology.co.uk',
+    areaServed: 'GB',
+    sameAs: [],
+    offers: {
+      '@type': 'Service',
+      name: 'Document Support & Preparation',
+      description: 'Help organising paperwork, preparing clear documents and understanding next steps in complicated processes',
+      areaServed: 'GB',
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export const metadata: Metadata = {
   title: 'Supportology | Document Support & Paperwork Help',
-  description: 'Overwhelmed by paperwork? Supportology helps you organise forms, correspondence, complaints, appeals and evidence into clear, manageable action plans.',
+  description: 'Overwhelmed by paperwork? Supportology helps you organise forms, correspondence, complaints, appeals and evidence into clear, prepared documents.',
+  keywords: ['document support', 'paperwork help', 'form assistance', 'complaints', 'appeals', 'evidence organisation', 'UK'],
+  author: 'Supportology',
+  creator: 'Supportology',
   generator: 'v0.app',
   icons: {
     icon: '/icon.svg',
@@ -26,9 +55,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Supportology | Document Support & Paperwork Help',
-    description: 'Overwhelmed by paperwork? Supportology helps you organise forms, correspondence, complaints, appeals and evidence into clear, manageable action plans.',
+    description: 'Overwhelmed by paperwork? Supportology helps you organise forms, correspondence, complaints, appeals and evidence into clear, prepared documents.',
     url: 'https://supportology.co.uk',
     type: 'website',
+    locale: 'en_GB',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Supportology | Document Support & Paperwork Help',
+    description: 'Overwhelmed by paperwork? Supportology helps you organise forms, correspondence, complaints, appeals and evidence into clear, prepared documents.',
+  },
+  alternates: {
+    canonical: 'https://supportology.co.uk',
   },
 }
 
@@ -52,6 +90,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable}`} suppressHydrationWarning>
       <head>
         <FaviconSwitcher />
+        <JsonLdSchema />
       </head>
       <body className="font-sans antialiased bg-background text-foreground">
         <AnimatedBackground />
