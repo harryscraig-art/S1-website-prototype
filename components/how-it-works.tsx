@@ -78,7 +78,7 @@ export function HowItWorks() {
         {/* Help Panel */}
         <HelpPanel
           closedLabel="What happens after I send a message?"
-          openCopy="You send a short enquiry, we look at the type of paperwork involved, and we explain whether it is suitable for document support. If it is, the next step is agreed by email."
+          openCopy="You send a short enquiry, we review the type of paperwork involved and confirm whether it is suitable for document support. If it is, we agree the next step, price and timescale by email."
         />
       </div>
     </section>
