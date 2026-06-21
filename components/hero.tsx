@@ -8,7 +8,7 @@ export function Hero() {
       <div className="container-custom">
         <div className="max-w-2xl mx-auto text-center animate-slide-up">
           {/* Teal accent line above heading */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-6" aria-hidden="true">
             <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
           </div>
 
@@ -18,7 +18,7 @@ export function Hero() {
           </h1>
 
           {/* Decorative line separator */}
-          <div className="flex items-center justify-center gap-3 mb-8">
+          <div className="flex items-center justify-center gap-3 mb-8" aria-hidden="true">
             <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
             <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
           </div>
@@ -43,6 +43,7 @@ export function Hero() {
             }}
             className="inline-flex items-center justify-center px-8 py-4 bg-[color:var(--accent-primary)] text-white hover:bg-[color:var(--accent-primary)]/90 active:bg-[color:var(--accent-primary)]/80 rounded-lg font-medium transition-all duration-300 text-lg gap-2 hover:shadow-lg hover:scale-105 animate-scale-in"
             style={{ animationDelay: '0.2s' }}
+            aria-label="Open enquiry form to get help with your paperwork"
           >
             Get Help With My Paperwork
           </button>
