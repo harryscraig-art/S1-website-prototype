@@ -40,9 +40,9 @@ export function HelpPanel({ closedLabel, openCopy }: HelpPanelProps) {
           id="help-panel-content"
           className="mt-3 p-4 bg-[color:var(--card)] rounded-lg border border-[color:var(--accent-primary)]/30 animate-slide-up"
         >
-          <p className="text-sm text-[color:var(--muted-foreground)] leading-relaxed">
+          <div className="text-sm text-[color:var(--muted-foreground)] leading-relaxed whitespace-pre-line">
             {openCopy}
-          </p>
+          </div>
         </div>
       )}
     </div>

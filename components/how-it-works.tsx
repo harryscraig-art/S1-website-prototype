@@ -35,7 +35,7 @@ export function HowItWorks() {
           </div>
           <h2 className="text-[color:var(--foreground)]">How It Works</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
-            Get your paperwork moving in three simple steps.
+            Get your paperwork moving in three easy steps.
           </p>
         </div>
 
