@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react'
 
 interface HelpPanelProps {
   closedLabel: string
-  openCopy: string
+  openCopy: string | string[]
 }
 
 export function HelpPanel({ closedLabel, openCopy }: HelpPanelProps) {
@@ -40,9 +40,15 @@ export function HelpPanel({ closedLabel, openCopy }: HelpPanelProps) {
           id="help-panel-content"
           className="mt-3 p-4 bg-[color:var(--card)] rounded-lg border border-[color:var(--accent-primary)]/30 animate-slide-up"
         >
-          <p className="text-sm text-[color:var(--muted-foreground)] leading-relaxed">
-            {openCopy}
-          </p>
+          <div className="text-sm text-[color:var(--muted-foreground)] leading-relaxed space-y-3">
+            {Array.isArray(openCopy) ? (
+              openCopy.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))
+            ) : (
+              <p>{openCopy}</p>
+            )}
+          </div>
         </div>
       )}
     </div>

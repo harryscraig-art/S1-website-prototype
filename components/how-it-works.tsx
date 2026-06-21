@@ -8,13 +8,13 @@ export function HowItWorks() {
     {
       number: '1',
       title: 'Tell us what you need help with',
-      description: 'Send a short message about the paperwork, deadline or problem you are dealing with.',
+      description: 'Send a short message about your paperwork, deadline or the problem you are trying to deal with.',
       icon: MessageCircle,
     },
     {
       number: '2',
-      title: 'We organise the issue',
-      description: 'We review the information, identify the key documents and make sense of what needs doing.',
+      title: 'We make sense of it',
+      description: 'We review what you send, organise the key information and identify what needs to be prepared.',
       icon: Layers,
     },
     {
@@ -35,16 +35,21 @@ export function HowItWorks() {
           </div>
           <h2 className="text-[color:var(--foreground)]">How It Works</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
-            Simple. Clear. Straightforward.
+            Get your paperwork moving in three easy steps.
           </p>
         </div>
 
         {/* Steps Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12 animate-stagger">
           {steps.map((step, index) => (
-            <div
+            <button
               key={index}
-              className="group relative"
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).openEnquiryModal) {
+                  (window as any).openEnquiryModal(step.title)
+                }
+              }}
+              className="group relative text-left bg-transparent border-none cursor-pointer p-0 hover:no-underline"
             >
               {/* Teal accent background on hover */}
               <div className="absolute inset-0 bg-[color:var(--accent-primary)]/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -71,14 +76,17 @@ export function HowItWorks() {
                 {/* Bottom teal accent line */}
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-[color:var(--accent-primary)] group-hover:w-full transition-all duration-500 rounded-b-lg" />
               </div>
-            </div>
+            </button>
           ))}
         </div>
 
         {/* Help Panel */}
         <HelpPanel
           closedLabel="What happens after I send a message?"
-          openCopy="You send a short enquiry, we review the type of paperwork involved and confirm whether it is suitable for document support. If it is, we agree the next step, price and timescale by email."
+          openCopy={[
+            "Send a short message about what you need help with. We'll review the paperwork involved and confirm whether it is suitable for document support.",
+            "If we can help, we'll agree the next step, price and timescale by email — so you know what happens before anything starts."
+          ]}
         />
       </div>
     </section>

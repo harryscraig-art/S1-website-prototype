@@ -10,22 +10,22 @@ export function HowWeHaveHelped() {
   const examples = [
     {
       title: 'Non-Molestation Order Paperwork',
-      description: 'Feeling overwhelmed after being unable to obtain legal aid and needing help preparing paperwork for an urgent non-molestation order application.',
+      description: 'Complicated and urgent paperwork where someone needed help organising information and preparing documents for a non-molestation order application.',
       icon: ShieldCheck,
     },
     {
       title: 'Benefits Mandatory Reconsideration',
-      description: 'Needing help understanding a benefits decision, organising medical evidence and preparing clear paperwork for a mandatory reconsideration.',
+      description: 'A benefits decision that did not appear to take all the evidence into account, with medical evidence to organise and clear paperwork prepared for a mandatory reconsideration.',
       icon: ClipboardList,
     },
     {
       title: 'School Admissions Appeal',
-      description: 'Feeling confused by long emails, appeal papers, guidance documents and supporting evidence received from the council, and needing help organising everything into a clear and manageable appeal bundle.',
+      description: 'A complicated school admissions appeal involving long council emails, appeal papers, guidance documents and supporting evidence that needed organising into a clear, manageable appeal bundle.',
       icon: GraduationCap,
     },
     {
-      title: 'Council Tax Arrears Correspondence',
-      description: 'Receiving multiple letters, notices and council correspondence relating to council tax arrears and needing help understanding the paperwork, organising documents and preparing a clear response.',
+      title: 'Council Tax Correspondence',
+      description: 'Confusing council tax arrears letters, notices and correspondence where the paperwork needed to be understood, organised and turned into a clear written response.',
       icon: Mail,
     },
   ]
@@ -40,7 +40,7 @@ export function HowWeHaveHelped() {
           </div>
           <h2 className="text-[color:var(--foreground)]">How We Have Helped</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
-            Real examples of the types of support we have provided
+            Real examples of problems we have helped people organise, prepare and move forward.
           </p>
         </div>
 

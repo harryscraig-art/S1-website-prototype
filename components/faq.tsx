@@ -10,32 +10,35 @@ export function FAQ() {
     {
       question: 'Is this legal advice?',
       answer:
-        'No. Supportology provides document support and preparation assistance. We do not provide regulated legal advice.',
+        'No. Supportology provides document support and preparation assistance.',
     },
     {
       question: 'How much does it cost?',
-      answer:
-        'The price depends on the type of paperwork, the amount of documents involved and how quickly you need help. Once we understand what you need, we will confirm the price and timescale before any work begins.',
+      answer: [
+        'The price depends on the type of paperwork, the number of documents involved and how quickly you need help.',
+        'Before any work begins, we confirm the price, timescale and next step, so you know what will happen and what it will cost.',
+      ],
     },
     {
       question: 'What if I have an urgent deadline?',
-      answer:
-        'Tell us the deadline when you send your enquiry. Urgent paperwork is easier to deal with when we can see it early, so it is better to contact us as soon as possible rather than waiting until the last minute.',
+      answer: [
+        'Tell us your deadline when you send your enquiry.',
+        'The earlier we see the paperwork, the easier it is to help you organise what matters, prepare what is needed and avoid leaving everything until the last minute.',
+      ],
     },
     {
       question: 'What happens after I submit my enquiry?',
-      answer:
-        'We review your enquiry and confirm whether it is suitable for document support. If it is, we will explain the next step, price and timescale by email.',
-    },
-    {
-      question: 'How is my information kept confidential?',
-      answer:
-        'Your information is treated confidentially and used only to review your enquiry and provide the support you ask for. We do not share your details with third parties without your consent.',
+      answer: [
+        'You send a short message about the paperwork you are dealing with.',
+        'We review what you send, confirm whether it is suitable for document support, and explain the next step, price and timescale by email.',
+      ],
     },
     {
       question: 'Can you help with all types of paperwork?',
-      answer:
-        'We help with many types of important paperwork, including forms, applications, complaints, appeals, letters, written responses and evidence packs. If you are unsure whether we can help, send an enquiry and we will let you know.',
+      answer: [
+        'We help with many types of paperwork that need a clear response, including forms, applications, complaints, appeals, letters, written responses and evidence packs.',
+        'If you are unsure whether we can help, send an enquiry and we will let you know if we can.',
+      ],
     },
   ]
 
@@ -48,7 +51,7 @@ export function FAQ() {
       name: faq.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.answer,
+        text: Array.isArray(faq.answer) ? faq.answer.join(' ') : faq.answer,
       },
     })),
   }
@@ -96,9 +99,15 @@ export function FAQ() {
 
               {openIndex === index && (
                 <div className="px-6 pb-6 border-t-2 border-[color:var(--accent-primary)] bg-[color:var(--accent-light)]/30 dark:bg-[color:var(--accent-primary)]/10 animate-slide-up">
-                  <p className="text-[color:var(--muted-foreground)] leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <div className="text-[color:var(--muted-foreground)] leading-relaxed space-y-3">
+                    {Array.isArray(faq.answer) ? (
+                      faq.answer.map((paragraph, pIndex) => (
+                        <p key={pIndex}>{paragraph}</p>
+                      ))
+                    ) : (
+                      <p>{faq.answer}</p>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
