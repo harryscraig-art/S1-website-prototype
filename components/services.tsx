@@ -63,15 +63,15 @@ export function Services() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold mb-2 text-[color:var(--foreground)]">{service.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[color:var(--foreground)]">{service.title}</h3>
 
                   {/* Tagline */}
-                  <p className="text-[color:var(--accent-primary)] font-semibold mb-3 text-xs">
+                  <p className="text-[color:var(--accent-primary)] font-semibold mb-3 text-sm">
                     {service.tagline}
                   </p>
 
                   {/* Description */}
-                  <p className="text-[color:var(--muted-foreground)] leading-relaxed text-sm">
+                  <p className="text-[color:var(--muted-foreground)] leading-relaxed">
                     {service.description}
                   </p>
 
