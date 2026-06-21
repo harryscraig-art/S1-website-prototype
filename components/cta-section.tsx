@@ -19,14 +19,6 @@ export function CTASection() {
           <div className="w-8 h-1 bg-[color:var(--accent-primary)] rounded-full" />
         </div>
 
-        <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-3">
-          Before, the paperwork feels confusing, scattered or difficult to deal with.
-        </p>
-
-        <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-6">
-          After, you know what matters, what needs preparing and what to do next.
-        </p>
-
         <p className="text-base md:text-lg text-[color:var(--muted-foreground)] mb-10 leading-relaxed">
           Tell us about the paperwork you are dealing with, and we&apos;ll help you work out whether we can help.
         </p>
