@@ -34,7 +34,7 @@ export function Services() {
       <div className="container-custom">
         <div className="text-center mb-12 animate-slide-up">
           {/* Teal accent line */}
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-4" aria-hidden="true">
             <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
           </div>
           <h2 className="text-[color:var(--foreground)]">What We Help With</h2>

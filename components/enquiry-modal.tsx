@@ -25,6 +25,11 @@ export function EnquiryModal() {
       }))
     }
     modalRef.current?.showModal()
+    // Focus the first form field for better accessibility
+    setTimeout(() => {
+      const firstInput = modalRef.current?.querySelector('input[type="text"]') as HTMLInputElement
+      firstInput?.focus()
+    }, 0)
   }
 
   // Expose openModal via window for external access
@@ -81,13 +86,16 @@ export function EnquiryModal() {
       id="enquiry-modal"
       ref={modalRef}
       className="w-full max-w-md rounded-lg backdrop:bg-black/50 backdrop:backdrop-blur-sm"
+      aria-modal="true"
+      aria-labelledby="enquiry-modal-title"
+      aria-describedby="enquiry-modal-description"
     >
       <div className="bg-[color:var(--background)] dark:bg-[color:var(--card)] p-6 md:p-8 relative">
         {/* Close Button */}
         <button
           onClick={closeModal}
           className="absolute top-4 right-4 p-2 hover:bg-[color:var(--muted)] rounded-md transition-colors"
-          aria-label="Close modal"
+          aria-label="Close form modal"
         >
           <X size={20} />
         </button>
@@ -95,8 +103,8 @@ export function EnquiryModal() {
         {!submitted ? (
           <>
             {/* Modal Header */}
-            <h2 className="text-2xl font-bold mb-2">Tell Us About Your Paperwork</h2>
-            <p className="text-[color:var(--muted-foreground)] mb-6">
+            <h2 id="enquiry-modal-title" className="text-2xl font-bold mb-2">Tell Us About Your Paperwork</h2>
+            <p id="enquiry-modal-description" className="text-[color:var(--muted-foreground)] mb-6">
               Send a few details and we&apos;ll let you know whether we can help.
             </p>
 

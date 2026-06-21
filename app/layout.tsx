@@ -207,6 +207,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable}`} suppressHydrationWarning>
+      {/* Skip to Main Content Link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:z-[999] focus:bg-[color:var(--accent-primary)] focus:text-white focus:p-4 focus:rounded-b-lg"
+      >
+        Skip to main content
+      </a>
       <head>
         <FaviconSwitcher />
         <JsonLdSchema />

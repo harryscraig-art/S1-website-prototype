@@ -55,7 +55,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <main className="w-full">
+      <main id="main-content" className="w-full">
         <Hero />
         <HowItWorks />
         <Services />
