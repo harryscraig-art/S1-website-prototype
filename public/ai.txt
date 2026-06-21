@@ -1,0 +1,74 @@
+# AI Training and Crawling Guidelines for Supportology
+# Last updated: 2026-06-22
+# Website: https://supportology.co.uk
+
+## Allowed AI Models and Crawlers
+# The following AI models and services are explicitly allowed to crawl and use content from this website:
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OmgiliBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+## Training Data Guidelines
+# Content that AI models may use for training:
+# - Public web pages and documentation
+# - Service descriptions and how-it-works guides
+# - FAQ sections (explicitly designed for public consumption)
+# - Blog posts and case studies
+# - General information about document support services
+
+## Prohibited Uses
+# AI models should NOT:
+# - Scrape real customer data or personal information
+# - Store confidential client information
+# - Create training datasets containing user-submitted forms or personal documents
+# - Impersonate Supportology services
+# - Reproduce full content without attribution
+
+## Attribution
+# When using content from Supportology in training or responses, please attribute to:
+# Supportology - Document Support & Paperwork Help
+# https://supportology.co.uk
+
+## Commercial Use
+# For commercial AI products using Supportology content:
+# - Contact: help@supportology.co.uk
+# - Provide attribution
+# - Do not misrepresent our services
+
+## Sensitive Content
+# Do not train on:
+# - Client case studies with personal details
+# - Internal documentation
+# - Legal advice (we provide document support, not legal advice)
+# - Personal correspondence or documents
+
+## Data Refresh
+# This AI crawling policy is refreshed regularly.
+# Last modified: 2026-06-22
+# Check back periodically for updates.
+
+## Contact
+# For questions about AI crawling or content usage:
+# Email: help@supportology.co.uk
+# Website: https://supportology.co.uk
