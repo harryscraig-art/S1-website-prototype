@@ -28,11 +28,6 @@ export function FAQ() {
         'We review your enquiry and confirm whether it is suitable for document support. If it is, we will explain the next step, price and timescale by email.',
     },
     {
-      question: 'How is my information kept confidential?',
-      answer:
-        'Your information is treated confidentially and used only to review your enquiry and provide the support you ask for. We do not share your details with third parties without your consent.',
-    },
-    {
       question: 'Can you help with all types of paperwork?',
       answer:
         'We help with many types of important paperwork, including forms, applications, complaints, appeals, letters, written responses and evidence packs. If you are unsure whether we can help, send an enquiry and we will let you know.',
