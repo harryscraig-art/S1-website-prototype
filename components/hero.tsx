@@ -50,7 +50,10 @@ export function Hero() {
           {/* Help Panel */}
           <HelpPanel
             closedLabel="What kind of help can I get?"
-            openCopy="If you have a deadline, a form to complete, a decision to challenge or evidence to organise, we help you get the paperwork into clearer shape so you can move forward with more confidence.\n\nWe help with forms, letters, complaints, appeals, statements and evidence packs. We provide document support and preparation assistance."
+            openCopy={[
+              "If you have a deadline, a form to complete, a decision to challenge or evidence to organise, we help you get the paperwork into clearer shape so you can move forward with more confidence.",
+              "We help with forms, letters, complaints, appeals, statements and evidence packs. We provide document support and preparation assistance."
+            ]}
           />
         </div>
       </div>
