@@ -86,11 +86,11 @@ export function Services() {
         {/* Help Panel */}
         <HelpPanel
           closedLabel="What paperwork can you help with?"
-          openCopy="We help with important paperwork such as forms, applications, complaints, appeals, formal letters, written responses and evidence packs.
-
-This can include council, benefits, housing, school admissions and family court preparation paperwork.
-
-We help organise the documents, prepare clear written responses and make the next steps easier to understand."
+          openCopy={[
+            "We help with paperwork that needs a clear response — including forms, applications, complaints, appeals, formal letters, written responses and evidence packs.",
+            "This can include council, benefits, housing, school admissions and family court preparation paperwork.",
+            "We help you organise what matters, prepare clearer documents, and understand what needs to happen next."
+          ]}
         />
 
         {/* Additional Services Text */}
