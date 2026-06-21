@@ -12,17 +12,20 @@ export function Services() {
     {
       icon: FileText,
       title: 'Forms & Applications',
-      description: 'Help preparing, completing and organising forms, applications and supporting paperwork.',
+      tagline: 'Get the form finished, organised and ready to send.',
+      description: 'Help with forms, applications and supporting paperwork when you need to get something submitted properly.',
     },
     {
       icon: Mail,
-      title: 'Correspondence & Evidence',
-      description: 'Sort through letters, emails, documents and evidence to build a clear, organised, compelling case.',
+      title: 'Letters & Evidence',
+      tagline: 'Turn scattered papers into a clear position.',
+      description: 'We help sort letters, emails, documents and evidence so you know what you have, what matters, and what needs to be used.',
     },
     {
       icon: MessageSquareWarning,
       title: 'Appeals & Complaints',
-      description: 'Support preparing appeals, complaints, and formal responses with organised evidence and clear explanations.',
+      tagline: 'Challenge a decision with a clear response.',
+      description: 'Support preparing complaints, appeals and formal responses with organised evidence and clear explanations.',
     },
   ]
 
@@ -36,7 +39,7 @@ export function Services() {
           </div>
           <h2 className="text-[color:var(--foreground)]">What We Help With</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
-            Document support across a wide range of situations
+            When paperwork needs dealing with, we help you move.
           </p>
         </div>
 
@@ -60,7 +63,12 @@ export function Services() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold mb-3 text-[color:var(--foreground)]">{service.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-[color:var(--foreground)]">{service.title}</h3>
+
+                  {/* Tagline */}
+                  <p className="text-[color:var(--accent-primary)] font-semibold mb-3 text-sm">
+                    {service.tagline}
+                  </p>
 
                   {/* Description */}
                   <p className="text-[color:var(--muted-foreground)] leading-relaxed">
