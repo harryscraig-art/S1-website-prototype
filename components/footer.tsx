@@ -55,7 +55,7 @@ export function Footer() {
               </button>
             </div>
             <p className="text-sm text-[color:var(--muted-foreground)] leading-relaxed">
-              Turning paperwork problems into clear, prepared documents.
+              Meet your deadline. Know your next step.
             </p>
           </div>
 

@@ -8,13 +8,13 @@ export function HowItWorks() {
     {
       number: '1',
       title: 'Tell us what you need help with',
-      description: 'Send a short message about the paperwork, deadline or problem you are dealing with.',
+      description: 'Send a short message about your paperwork, deadline or the problem you are trying to deal with.',
       icon: MessageCircle,
     },
     {
       number: '2',
-      title: 'We organise the issue',
-      description: 'We review the information, identify the key documents and make sense of what needs doing.',
+      title: 'We make sense of it',
+      description: 'We review what you send, organise the key information and identify what needs to be prepared.',
       icon: Layers,
     },
     {
@@ -35,7 +35,7 @@ export function HowItWorks() {
           </div>
           <h2 className="text-[color:var(--foreground)]">How It Works</h2>
           <p className="text-lg text-[color:var(--accent-primary)] font-semibold mt-4">
-            Simple. Clear. Straightforward.
+            Get your paperwork moving in three simple steps.
           </p>
         </div>
 
