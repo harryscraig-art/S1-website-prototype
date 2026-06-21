@@ -11,7 +11,7 @@ export function CTASection() {
           <div className="w-16 h-1 bg-[color:var(--accent-primary)] rounded-full" />
         </div>
 
-        <h2 className="mb-6 text-[color:var(--foreground)]">Ready to get organised?</h2>
+        <h2 className="mb-6 text-[color:var(--foreground)]">Ready to get your paperwork moving?</h2>
 
         {/* Decorative line accent */}
         <div className="flex items-center justify-center gap-4 mb-8">
@@ -20,11 +20,15 @@ export function CTASection() {
         </div>
 
         <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-3">
-          Document support that actually helps.
+          Before, the paperwork feels confusing, scattered or difficult to deal with.
+        </p>
+
+        <p className="text-lg md:text-xl text-[color:var(--accent-primary)] font-semibold mb-6">
+          After, you know what matters, what needs preparing and what to do next.
         </p>
 
         <p className="text-base md:text-lg text-[color:var(--muted-foreground)] mb-10 leading-relaxed">
-          Tell us about your paperwork difficulty, and we&apos;ll help organise the issue, prepare clear documents and explain the next steps.
+          Tell us about the paperwork you are dealing with, and we&apos;ll help you work out whether we can help.
         </p>
 
         <button
