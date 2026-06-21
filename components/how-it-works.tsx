@@ -42,9 +42,14 @@ export function HowItWorks() {
         {/* Steps Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12 animate-stagger">
           {steps.map((step, index) => (
-            <div
+            <button
               key={index}
-              className="group relative"
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).openEnquiryModal) {
+                  (window as any).openEnquiryModal(step.title)
+                }
+              }}
+              className="group relative text-left bg-transparent border-none cursor-pointer p-0 hover:no-underline"
             >
               {/* Teal accent background on hover */}
               <div className="absolute inset-0 bg-[color:var(--accent-primary)]/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -71,7 +76,7 @@ export function HowItWorks() {
                 {/* Bottom teal accent line */}
                 <div className="absolute bottom-0 left-0 w-0 h-1 bg-[color:var(--accent-primary)] group-hover:w-full transition-all duration-500 rounded-b-lg" />
               </div>
-            </div>
+            </button>
           ))}
         </div>
 
