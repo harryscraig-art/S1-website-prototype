@@ -96,7 +96,7 @@ export function Services() {
         {/* Additional Services Text */}
         <div className="text-center mt-16 animate-fade-in">
           <p className="text-[color:var(--muted-foreground)] text-lg">
-            Not sure if we can help? Send us a message and we&apos;ll let you know.
+            Not sure where to start? Send us a message and we&apos;ll let you know if we can help.
           </p>
         </div>
       </div>
