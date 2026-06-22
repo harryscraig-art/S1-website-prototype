@@ -46,6 +46,28 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  openGraph: {
+    title: 'Supportology | Document Support & Paperwork Help',
+    description: 'Meet your deadline. Know your next step. Help with forms, letters, complaints, appeals and evidence.',
+    url: 'https://supportology.co.uk',
+    type: 'website',
+    locale: 'en_GB',
+    images: [
+      {
+        url: 'https://supportology.co.uk/icon-512.png',
+        width: 512,
+        height: 512,
+        alt: 'Supportology - Document Support & Paperwork Help',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Supportology | Document Support & Paperwork Help',
+    description: 'Meet your deadline. Know your next step.',
+    image: 'https://supportology.co.uk/icon-512.png',
+  },
   alternates: {
     canonical: 'https://supportology.co.uk',
   },

@@ -10,8 +10,10 @@ const geistSans = Geist({ variable: '--font-sans', subsets: ['latin'] })
 function FaviconSwitcher() {
   return (
     <>
-      <link rel="icon" href="/favicon.png" type="image/png" />
-      <link rel="apple-touch-icon" href="/apple-icon.png" />
+      <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+      <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
+      <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+      <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
       <link rel="manifest" href="/site.webmanifest" />
     </>
   )
