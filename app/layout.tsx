@@ -25,9 +25,9 @@ function JsonLdSchema() {
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': 'https://supportology.co.uk/#organization',
+        '@id': 'https://supportology.stratamarketing.co.uk/#organization',
         name: 'Supportology',
-        url: 'https://supportology.co.uk',
+        url: 'https://supportology.stratamarketing.co.uk',
         description: 'Meet your deadline. Know your next step. Document support and preparation assistance for paperwork, forms, complaints, appeals and evidence packs.',
         email: 'help@supportology.co.uk',
         telephone: null,
@@ -45,31 +45,31 @@ function JsonLdSchema() {
         sameAs: [],
         image: {
           '@type': 'ImageObject',
-          url: 'https://supportology.co.uk/icon.svg',
+          url: 'https://supportology.stratamarketing.co.uk/icon-512.png',
           width: '512',
           height: '512',
         },
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://supportology.co.uk/#website',
+        '@id': 'https://supportology.stratamarketing.co.uk/#website',
         name: 'Supportology',
-        url: 'https://supportology.co.uk',
+        url: 'https://supportology.stratamarketing.co.uk',
         description: 'Document Support & Paperwork Help',
         publisher: {
-          '@id': 'https://supportology.co.uk/#organization',
+          '@id': 'https://supportology.stratamarketing.co.uk/#organization',
         },
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://supportology.co.uk?s={search_term_string}',
+          target: 'https://supportology.stratamarketing.co.uk?s={search_term_string}',
           'query-input': 'required name=search_term_string',
         },
       },
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://supportology.co.uk/#localbusiness',
+        '@id': 'https://supportology.stratamarketing.co.uk/#localbusiness',
         name: 'Supportology',
-        image: 'https://supportology.co.uk/icon.svg',
+        image: 'https://supportology.stratamarketing.co.uk/icon-512.png',
         description: 'Document support and preparation assistance',
         areaServed: 'GB',
         serviceArea: {
@@ -79,31 +79,31 @@ function JsonLdSchema() {
       },
       {
         '@type': 'Service',
-        '@id': 'https://supportology.co.uk/#service-1',
+        '@id': 'https://supportology.stratamarketing.co.uk/#service-1',
         name: 'Forms & Applications',
         description: 'Get the form finished, organised and ready to send. Help with forms, applications and supporting paperwork when you need to get something submitted properly.',
         provider: {
-          '@id': 'https://supportology.co.uk/#organization',
+          '@id': 'https://supportology.stratamarketing.co.uk/#organization',
         },
         areaServed: 'GB',
       },
       {
         '@type': 'Service',
-        '@id': 'https://supportology.co.uk/#service-2',
+        '@id': 'https://supportology.stratamarketing.co.uk/#service-2',
         name: 'Letters & Evidence',
         description: 'Turn scattered papers into a clear position. We help sort letters, emails, documents and evidence so you know what you have, what matters, and what needs to be used.',
         provider: {
-          '@id': 'https://supportology.co.uk/#organization',
+          '@id': 'https://supportology.stratamarketing.co.uk/#organization',
         },
         areaServed: 'GB',
       },
       {
         '@type': 'Service',
-        '@id': 'https://supportology.co.uk/#service-3',
+        '@id': 'https://supportology.stratamarketing.co.uk/#service-3',
         name: 'Appeals & Complaints',
         description: 'Challenge a decision with a clear response. Support preparing complaints, appeals and formal responses with organised evidence and clear explanations.',
         provider: {
-          '@id': 'https://supportology.co.uk/#organization',
+          '@id': 'https://supportology.stratamarketing.co.uk/#organization',
         },
         areaServed: 'GB',
       },

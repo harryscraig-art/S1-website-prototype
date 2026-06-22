@@ -49,12 +49,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Supportology | Document Support & Paperwork Help',
     description: 'Meet your deadline. Know your next step. Help with forms, letters, complaints, appeals and evidence.',
-    url: 'https://supportology.co.uk',
+    url: 'https://supportology.stratamarketing.co.uk',
     type: 'website',
     locale: 'en_GB',
     images: [
       {
-        url: 'https://supportology.co.uk/icon-512.png',
+        url: 'https://supportology.stratamarketing.co.uk/icon-512.png',
         width: 512,
         height: 512,
         alt: 'Supportology - Document Support & Paperwork Help',
@@ -66,10 +66,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Supportology | Document Support & Paperwork Help',
     description: 'Meet your deadline. Know your next step.',
-    image: 'https://supportology.co.uk/icon-512.png',
+    image: 'https://supportology.stratamarketing.co.uk/icon-512.png',
   },
   alternates: {
-    canonical: 'https://supportology.co.uk',
+    canonical: 'https://supportology.stratamarketing.co.uk',
   },
 }
 
