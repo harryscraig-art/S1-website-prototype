@@ -94,7 +94,7 @@ export function EnquiryModal() {
         {/* Close Button */}
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 p-2 hover:bg-[color:var(--muted)] rounded-md transition-colors"
+          className="absolute top-4 right-4 p-2 hover:bg-[color:var(--muted)] rounded-md transition-colors z-10"
           aria-label="Close form modal"
         >
           <X size={20} />
@@ -103,7 +103,7 @@ export function EnquiryModal() {
         {!submitted ? (
           <>
             {/* Modal Header */}
-            <h2 id="enquiry-modal-title" className="text-2xl font-bold mb-2">Tell Us About Your Paperwork</h2>
+            <h2 id="enquiry-modal-title" className="text-2xl font-bold mb-2 pr-10">Tell Us About Your Paperwork</h2>
             <p id="enquiry-modal-description" className="text-[color:var(--muted-foreground)] mb-6">
               Send a few details and we&apos;ll let you know whether we can help.
             </p>
